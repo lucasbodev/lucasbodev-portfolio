@@ -1,0 +1,62 @@
+.contactGrid {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--space-3);
+}
+
+.contactLinks {
+    grid-column: span 5;
+    gap: var(--space-7);
+}
+
+.contactFormCell {
+    grid-column: span 7;
+    grid-row: span 2;
+    gap: var(--space-7);
+}
+
+.cellHead {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.orange {
+    color: var(--primary-color);
+}
+
+.contactImg {
+    grid-column: span 5;
+    padding: 0;
+    flex-flow: column-reverse;
+}
+
+.bye {
+    object-fit: contain;
+    height: 300px;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.input {
+    padding: var(--space-4);
+    background-color: var(--secondary-color-900);
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+.input:focus {
+    outline-color: var(--primary-color-500);
+}

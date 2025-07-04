@@ -1,0 +1,65 @@
+.testimonialCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  border-radius: var(--border-radius);
+  width: 420px;
+  min-width: 420px;
+  max-width: 420px;
+  padding: var(--space-3);
+  background-color: var(--secondary-color-900);
+}
+
+@media (max-width: 768px) {
+  .testimonialCard {
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+  }
+}
+
+.testimonialCardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.quoteIcon {
+  height: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+}
+
+.quote {
+  font-size: var(--font-size-2);
+}
+
+.author {
+  display: flex;
+  gap: var(--space-3);
+
+}
+
+.authorInfos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  justify-content: center;
+}
+
+.authorName {
+  font-size: var(--font-size-2);
+  color: var(--primary-color);
+}
+
+.authorJob {
+  font-size: var(--font-size-2);
+}

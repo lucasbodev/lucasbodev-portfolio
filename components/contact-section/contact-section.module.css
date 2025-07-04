@@ -1,0 +1,69 @@
+.largeParagraph {
+  padding-right: var(--space-9);
+}
+
+.contact {
+  grid-column: 1 / span 8;
+  gap: var(--space-7);
+  height: min-content;
+}
+
+.contactLinks {
+  display: flex;
+  gap: var(--space-5);
+  width: 100%;
+}
+
+.contactLink {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--black-900);
+  padding-inline: var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.arrowBtn {
+  padding: var(--space-2);
+  border-radius: 50%;
+  border: 1px solid var(--black-900);
+}
+
+.contactLinkIcon {
+  width: 32px;
+  min-width: 32px;
+  max-width: 32px;
+  aspect-ratio: 1;
+}
+
+.contactImg {
+  grid-column: span 4;
+  padding: 0;
+  flex-flow: column-reverse;
+}
+
+.bye {
+  object-fit: contain;
+  height: 300px;
+}
+
+.cellHead {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.orange {
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .contactLinks {
+    flex-direction: column;
+  }
+
+  .contactLink {
+    height: 120px;
+  }
+}

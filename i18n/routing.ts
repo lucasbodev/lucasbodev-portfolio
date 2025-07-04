@@ -13,37 +13,9 @@ export const routing = defineRouting({
   // The routing configuration
   pathnames: {
     '/': '/',
-    '/counter': {
-      fr: '/compteur',
-      en: '/counter',
-      de: '/zähler',
-      nl: '/tellen',
-    },
-    '/products': {
-      fr: '/produits',
-      en: '/products',
-      de: '/produkte',
-      nl: '/producten',
-    },
-    '/test/[num]': '/test/[num]',
-    '/products/add-product': {
-      fr: '/produits/ajouter-produit',
-      en: '/products/add-product',
-      de: '/produkte/produkt-hinzufügen',
-      nl: '/producten/voeg-product-toe',
-    },
-    '/products/add-product/success': {
-      fr: '/produits/ajouter-produit/succes',
-      en: '/products/add-product/success',
-      de: '/produkte/produkt-hinzufügen/erfolg',
-      nl: '/producten/voeg-product-toe/succes',
-    },
-    '/products/edit-product/[id]': {
-      fr: '/produits/modifier-produit/[id]',
-      en: '/products/edit-product/[id]',
-      de: '/produkte/produkt-bearbeiten/[id]',
-      nl: '/producten/bewerk-product/[id]',
-    },
+    '/projects': '/projects',
+    '/project-details': '/project-details',
+    '/contact': '/contact',
   }
 });
 

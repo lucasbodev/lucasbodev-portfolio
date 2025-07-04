@@ -1,19 +1,26 @@
-import React from 'react';
-import NavLink from './nav-link.component';
-import ResponsiveNavLayout from './responsive-nav-layout.component';
-import { getTranslations } from 'next-intl/server';
+import React from "react";
+import bentoStyles from "@/styles/ui/bento.module.css";
+import styles from "@/components/nav/nav.module.css";
+import Avatar from "../avatar/avatar.component";
+import Icon, { IconSizes } from "../icon/icon.component";
 
-const Nav = async () => {
-
-    const t = await getTranslations('Nav');
+const Nav = () => {
 
     return (
-        <ResponsiveNavLayout>
-            <li><NavLink href="/" name={t('homeLink')} /></li>
-            <li><NavLink href="/counter" name={t('countLink')} /></li>
-            <li><NavLink href="/products" name={t('productsLink')} /></li>
-        </ResponsiveNavLayout>
+        <div className={`${bentoStyles.bentoCell} ${bentoStyles.fullWidth} ${styles.nav}`}>
+            <div className={`${styles.profile}`}>
+                <Avatar src="/images/avatar.png"/>
+                <div className={`${styles.infos}`}>
+                    <span className={`${styles.name}`}>Lucas Bodet</span>
+                    <span className={`${styles.job}`}>Full Stack Developer</span>
+                </div>
+            </div>
+            <div className={`${styles.languageSwitcher}`}>
+                <span>Français (FR)</span>
+                <Icon src="/icons/arrow-up.svg" size={IconSizes.MEDIUM}/>
+            </div>
+        </div>
     );
-};
+}
 
 export default Nav;

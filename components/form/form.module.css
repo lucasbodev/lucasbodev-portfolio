@@ -1,0 +1,70 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--spacing-8);
+}
+
+.fieldHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-2);
+}
+
+.label {
+    display: block;
+    margin-bottom: var(--spacing-1);
+    font-weight: 500;
+}
+
+.field {
+    width: 100%;
+}
+
+.addBtn {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--spacing-1) var(--spacing-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    background-color: transparent;
+    font-size: 0.875rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.addIcon {
+    height: 1rem;
+    width: 1rem;
+    margin-right: var(--spacing-1);
+}
+
+.input {
+    width: 100%;
+    padding: var(--spacing-2) var(--spacing-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    background-color: var(--color-white);
+    transition: border-color 0.2s;
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.inputError {
+    border-color: var(--color-error, #e11d48) !important;
+}
+
+.error {
+    color: var(--color-error, #e11d48);
+    font-size: 0.75rem;
+    margin-top: var(--spacing-1);
+}
+
+.hidden {
+    height: 0;
+    width: 0;
+    opacity: 0;
+}

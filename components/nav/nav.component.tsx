@@ -16,7 +16,7 @@ const Nav = () => {
                 </div>
             </div>
             <div className={`${styles.languageSwitcher}`}>
-                <span>Français (FR)</span>
+                <span>FR</span>
                 <Icon src="/icons/arrow-up.svg" size={IconSizes.MEDIUM}/>
             </div>
         </div>

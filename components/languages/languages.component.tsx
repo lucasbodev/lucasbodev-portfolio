@@ -21,7 +21,7 @@ const Languages = () => {
                     <li key={locale}>
                         <Link locale={locale} href={{
                             pathname: pathname as any,
-                            params: params as any,
+                            // params: params as any,
                         }}>
                             {locale.toUpperCase()}
                         </Link>

@@ -60,3 +60,40 @@
 .input:focus {
     outline-color: var(--primary-color-500);
 }
+
+@media (max-width: 1024px) {
+    .contactGrid {
+        grid-template-rows: auto;
+    }
+
+    .contactLinks {
+        grid-column: span 6;
+    }
+
+    .contactFormCell {
+        grid-column: span 6;
+    }
+
+    .contactImg {
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: 768px) {
+    .contactGrid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .contactLinks {
+        grid-column: span 6;
+    }
+
+    .contactFormCell {
+        grid-column: span 6;
+    }
+
+    .bye {
+        height: 200px;
+    }
+}

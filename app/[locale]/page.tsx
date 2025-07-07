@@ -3,13 +3,12 @@ import bentoStyles from '@/styles/ui/bento.module.css';
 import styles from '@/app/[locale]/home.module.css';
 import { getTranslations } from 'next-intl/server';
 import Bulleted from '@/components/bulleted/bulleted.component';
-import Icon, { IconSizes } from '@/components/icon/icon.component';
+import { IconSizes } from '@/components/icon/icon.component';
 import Heading, { HeadingTypes } from '@/components/heading/heading.component';
 import Image from 'next/image';
 import Marquee, { MarqueeDirection } from '@/components/marquee/marquee.component';
 import ProjectCard from '@/components/project-card/project-card.component';
 import TechLink from '@/components/tech-link/tech-link.component';
-import Avatar from '@/components/avatar/avatar.component';
 import Testimonial from '@/components/testimonial/testimonial.component';
 import ContactSection from '@/components/contact-section/contact-section.component';
 
@@ -138,15 +137,11 @@ const Home = async () => {
           <p>Explore the powerful tools and technologies I use to bring ideas to life.</p>
         </div>
         <div className={`${styles.technologies}`}>
-          {/* <div className={`${styles.row}`}> */}
             <TechLink logo='/images/next.svg' name='Next.js' />
             <TechLink logo='/images/prisma.svg' name='Prisma' />
-          {/* </div> */}
-          {/* <div className={`${styles.row}`}> */}
             <TechLink className={`${styles.third} ${styles.full}`} logo='/images/github.svg' name='GitHub' />
             <TechLink className={styles.third} logo='/images/figma.svg' name='Figma' />
             <TechLink className={styles.third} logo='/images/notion.svg' name='Notion' />
-          {/* </div> */}
         </div>
       </div>
 

@@ -58,6 +58,12 @@
   color: var(--primary-color);
 }
 
+@media (max-width: 1024px) {
+  .bye {
+    object-fit: cover;
+  }
+}
+
 @media (max-width: 768px) {
   .contactLinks {
     flex-direction: column;
@@ -65,5 +71,10 @@
 
   .contactLink {
     height: 120px;
+  }
+
+  .bye {
+    object-fit: contain;
+    height: 200px;
   }
 }

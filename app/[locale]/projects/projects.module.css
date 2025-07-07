@@ -47,3 +47,30 @@
   gap: var(--space-3);
   width: 100%;
 }
+
+@media (max-width: 1024px) {
+  .hero {
+    padding-right: var(--space-4);
+  }
+
+  .projectList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tiptopAvatar {
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .tiptopAvatar {
+    object-fit: contain;
+    height: 200px;
+  }
+
+  .projectList {
+    grid-template-columns: 1fr;
+  }
+}

@@ -74,13 +74,13 @@
     color: var(--primary-color);
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
     .projectCardContainer {
         height: 100%
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
     .projectCard {
         height: auto;

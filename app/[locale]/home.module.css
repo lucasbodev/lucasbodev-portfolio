@@ -152,13 +152,14 @@
   padding-inline: var(--space-4);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hero {
     padding-right: var(--space-4);
+    grid-column: 1 / span 7;
   }
 
-  .thumbsUp {
-    height: 200px;
+  .heroSide {
+    grid-column: span 5;
   }
 
   .third {
@@ -167,5 +168,16 @@
 
   .full {
     grid-column: span 6 !important;
+  }
+
+  .thumbsUp {
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .thumbsUp {
+    object-fit: contain;
+    height: 200px;
   }
 }

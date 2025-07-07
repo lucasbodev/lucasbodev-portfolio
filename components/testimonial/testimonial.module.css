@@ -10,7 +10,7 @@
   background-color: var(--secondary-color-900);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .testimonialCard {
     width: 300px;
     min-width: 300px;

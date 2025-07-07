@@ -28,6 +28,12 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .bento {
+    padding-inline: var(--space-4);
+  }
+}
+
 @media (max-width: 768px) {
   .bento {
     grid-template-columns: 1fr;

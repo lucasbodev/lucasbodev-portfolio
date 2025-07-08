@@ -11,6 +11,7 @@
   --primary-color-900: #FEFAF7;
   --secondary-gradient: linear-gradient(354deg, rgba(168, 207, 237, 1) 0%, rgba(235, 243, 249, 1) 100%);
   --secondary-color: #A8CFED;
+  --secondary-color-250: #e4eef7;
   --secondary-color-500: #EBF3F9;
   --secondary-color-900: #F5F8FB;
   --white: hsl(0, 0%, 100%);

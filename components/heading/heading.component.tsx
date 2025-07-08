@@ -20,7 +20,7 @@ export interface HeadingProps extends HtmlHTMLAttributes<HTMLHeadingElement> {
 
 const Heading = ({ type, startIcon, endIcon, children, ...props }: HeadingProps) => {
 
-    const { style } = props;
+    const { style, className } = props;
 
     if (!type) {
         type = HeadingTypes.H1;
@@ -46,17 +46,17 @@ const Heading = ({ type, startIcon, endIcon, children, ...props }: HeadingProps)
     const currentHeading = (content: React.ReactNode) => {
         switch (type) {
             case HeadingTypes.H1:
-                return <h1 className={`${styles.heading} ${styles[type]}`} style={style}>{content}</h1>;
+                return <h1 className={`${styles.heading} ${styles[type]} ${className}`} style={style}>{content}</h1>;
             case HeadingTypes.H2:
-                return <h2 className={`${styles.heading} ${styles[type]}`} style={style}>{content}</h2>;
+                return <h2 className={`${styles.heading} ${styles[type]} ${className}`} style={style}>{content}</h2>;
             case HeadingTypes.H3:
-                return <h3 className={`${styles.heading} ${styles[type]}`} style={style}>{content}</h3>;
+                return <h3 className={`${styles.heading} ${styles[type]} ${className}`} style={style}>{content}</h3>;
             case HeadingTypes.H4:
-                return <h4 className={`${styles.heading} ${styles[type]}`} style={style}>{content}</h4>;
+                return <h4 className={`${styles.heading} ${styles[type]} ${className}`} style={style}>{content}</h4>;
             case HeadingTypes.H5:
-                return <h5 className={`${styles.heading} ${styles[type]}`} style={style}>{content}</h5>;
+                return <h5 className={`${styles.heading} ${styles[type]} ${className}`} style={style}>{content}</h5>;
             default:
-                return <h1 className={`${styles.heading} ${styles[type]}`} style={style}>{content}</h1>;
+                return <h1 className={`${styles.heading} ${styles[type]} ${className}`} style={style}>{content}</h1>;
         }
     }
 

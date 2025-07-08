@@ -14,6 +14,10 @@
   width: 100%;
 }
 
+.contactLabel {
+  transition: all 0.1s ease-out;
+}
+
 .contactLink {
   border-radius: var(--border-radius);
   border: 1px solid var(--black-900);
@@ -22,12 +26,35 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  cursor: pointer;
+
+  &:hover {
+    .contactLabel {
+      color: var(--primary-color);
+    }
+    .arrowBtn {
+      background-color: var(--primary-color-900);
+      border: 1px solid var(--primary-color-750);
+
+      .contactLinkIcon {
+        color: var(--primary-color);
+        transform: rotate(45deg);
+      }
+    }
+  }
 }
 
 .arrowBtn {
-  padding: var(--space-2);
   border-radius: 50%;
   border: 1px solid var(--black-900);
+  width: 44px;
+  min-width: 44px;
+  max-width: 44px;
+  height: 44px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contactLinkIcon {
@@ -35,6 +62,7 @@
   min-width: 32px;
   max-width: 32px;
   aspect-ratio: 1;
+  transition: all 0.15s ease-out;
 }
 
 .contactImg {

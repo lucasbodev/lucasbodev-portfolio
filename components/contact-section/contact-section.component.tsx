@@ -22,15 +22,11 @@ const ContactSection = () => {
                 <div className={styles.contactLinks}>
                     <TechLink logo={'/images/linkedin.svg'} name='Linkedin' />
                     <div className={styles.contactLink}>
-                        <label>Contact</label>
+                        <label className={styles.contactLabel}>Contact</label>
                         <div className={`${styles.arrowBtn}`}>
-                            <Image
-                                width={1080}
-                                height={1080}
-                                alt='Project Link'
-                                src={'/icons/arrow-top-right.svg'}
-                                className={styles.contactLinkIcon}
-                            />
+                            <svg className={styles.contactLinkIcon} width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30.1698 15.085L15.0848 30.1699M30.1698 15.085L30.1698 26.3987M30.1698 15.085L18.8561 15.085" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
                         </div>
                     </div>
                 </div>

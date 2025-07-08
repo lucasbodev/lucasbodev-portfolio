@@ -7,6 +7,24 @@
   background-color: var(--secondary-color-900);
   padding: var(--space-2);
   width: 100%;
+  cursor: pointer;
+
+  &:hover {
+    .techLogoContainer {
+      transform: rotate(360deg);
+    }
+    .techInfos {
+      .techLinkIconContainer {
+        background-color: var(--white);
+        border-color: var(--primary-color-750);
+
+        .techLinkIcon {
+          transform: rotate(45deg);
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
 }
 
 .techLogoContainer {
@@ -17,6 +35,7 @@
   padding: 10px;
   border-radius: 50%;
   background-color: var(--white);
+  transition: all 0.2s ease-out;
 }
 
 .techLogo {
@@ -40,7 +59,8 @@
   justify-content: center;
   width: min-content;
   border-radius: 50%;
-  border: 1px solid var(--primary-color-750);
+  border: 1px solid var(--secondary-color-250);
+  transition: all 0.1s ease-out;
 }
 
 .techLinkIcon {
@@ -50,4 +70,5 @@
   width: 20px;
   min-width: 20px;
   max-width: 20px;
+  transition: all 0.15s ease-out;
 }

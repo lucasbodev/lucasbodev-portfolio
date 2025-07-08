@@ -1,7 +1,7 @@
 import React from 'react';
 import bentoStyles from '@/styles/ui/bento.module.css';
 import styles from '@/app/[locale]/home.module.css';
-import { getTranslations } from 'next-intl/server';
+// import { getTranslations } from 'next-intl/server';
 import Bulleted from '@/components/bulleted/bulleted.component';
 import { IconSizes } from '@/components/icon/icon.component';
 import Heading, { HeadingTypes } from '@/components/heading/heading.component';
@@ -11,6 +11,8 @@ import ProjectCard from '@/components/project-card/project-card.component';
 import TechLink from '@/components/tech-link/tech-link.component';
 import Testimonial from '@/components/testimonial/testimonial.component';
 import ContactSection from '@/components/contact-section/contact-section.component';
+import RevealMotion from '@/components/reveal-motion/reveal-motion';
+import { From, getRevealVariants } from '@/components/reveal-motion/variants';
 
 interface Collaboration {
   logo: string,
@@ -25,16 +27,16 @@ interface ProjectCard {
 
 const Home = async () => {
 
-  const t = await getTranslations('Home');
+  // const t = await getTranslations('Home');
 
   return (
     <>
-      <div className={`${bentoStyles.bentoCell} ${styles.hero}`}>
+      <RevealMotion variants={getRevealVariants(From.LEFT)} className={`${bentoStyles.bentoCell} ${styles.hero}`}>
         <Bulleted startIcon='/icons/calendar.svg' iconSize={IconSizes.LARGER}>
           <span className={styles.disponibility}>Available for hire</span>
         </Bulleted>
         <div className={`${styles.heroContent}`}>
-          <Heading type={HeadingTypes.H1} style={{lineHeight: '125%'}}>
+          <Heading type={HeadingTypes.H1} style={{ lineHeight: '125%' }}>
             Hello, <span className={styles.orange}>I’m Lucas -</span><br />
             Full Stack Developer
           </Heading>
@@ -43,10 +45,14 @@ const Home = async () => {
         <Bulleted startIcon='/icons/location.svg' iconSize={IconSizes.LARGER}>
           <span className={styles.disponibility}>Bastogne, Belgium</span>
         </Bulleted>
-      </div>
+      </RevealMotion>
 
       <div className={`${styles.heroSide}`}>
-        <div className={`${bentoStyles.bentoCell} ${styles.degree}`}>
+        <RevealMotion
+          variants={getRevealVariants(From.TOP, 0.1)}
+          mobileVariants={getRevealVariants(From.BOTTOM, 0.1)}
+          className={`${bentoStyles.bentoCell} ${styles.degree}`}
+        >
           <div className={`${styles.cellHead}`}>
             <Heading type={HeadingTypes.H4} startIcon='/icons/degree.svg'>
               Ma <span className={styles.orange}>Formation</span>
@@ -60,8 +66,8 @@ const Home = async () => {
             alt='School image'
             className={styles.degreeAvatar}
           />
-        </div>
-        <div className={`${bentoStyles.bentoCell} ${styles.collaborations}`}>
+        </RevealMotion>
+        <RevealMotion variants={getRevealVariants(From.RIGHT, 0.15)} className={`${bentoStyles.bentoCell} ${styles.collaborations}`}>
           <div className={styles.collabsHead}>
             <Heading type={HeadingTypes.H4} startIcon='/icons/collab.svg'>
               Mes <span className={styles.orange}>Collaborations</span>
@@ -83,10 +89,10 @@ const Home = async () => {
               ))
             }
           </Marquee>
-        </div>
+        </RevealMotion>
       </div>
 
-      <div className={`${bentoStyles.bentoCell} ${styles.projectsHeading}`}>
+      <RevealMotion variants={getRevealVariants(From.LEFT, 0.2)} className={`${bentoStyles.bentoCell} ${styles.projectsHeading}`}>
         <div className={`${styles.cellHead} ${styles.projectsTitle}`}>
           <Heading type={HeadingTypes.H2} startIcon='/icons/project.svg'>
             The projects <span className={styles.orange}>I realized</span>
@@ -100,7 +106,7 @@ const Home = async () => {
           src={'/images/thumbsup.png'}
           className={styles.thumbsUp}
         />
-      </div>
+      </RevealMotion>
 
       <div className={`${styles.projectsList}`}>
         {
@@ -109,12 +115,14 @@ const Home = async () => {
             { img: '/images/memory-wall-thumbnail.png', name: 'Memory Wall', description: 'Ui design, development' },
             { img: '/images/h2a-thumbnail.png', name: 'H2A', description: 'Development' },
           ] as ProjectCard[]).map((project, index) => (
-            <ProjectCard key={index} img={project.img} name={project.name} description={project.description} />
+            <RevealMotion key={index} variants={getRevealVariants(From.RIGHT, (index === 0 ? 0.4 : 0) + index / 10)} className={styles.cardLayout}>
+              <ProjectCard img={project.img} name={project.name} description={project.description} />
+            </RevealMotion>
           ))
         }
       </div>
 
-      <div className={`${bentoStyles.bentoCell} ${bentoStyles.fullWidth} ${styles.skills}`}>
+      <RevealMotion variants={getRevealVariants(From.BOTTOM)} className={`${bentoStyles.bentoCell} ${bentoStyles.fullWidth} ${styles.skills}`}>
         <Marquee gap={48} direction={MarqueeDirection.RIGHT}>
           {
             ['Frontend', 'Backend', 'Agile', 'SCRUM', 'Analyze', 'Ui Design', 'Prototyping'].map((skill, i) => (
@@ -127,9 +135,9 @@ const Home = async () => {
             ))
           }
         </Marquee>
-      </div>
+      </RevealMotion>
 
-      <div className={`${bentoStyles.bentoCell} ${bentoStyles.halfWidth} ${styles.techSection}`}>
+      <RevealMotion variants={getRevealVariants(From.BOTTOM)} className={`${bentoStyles.bentoCell} ${bentoStyles.halfWidth} ${styles.techSection}`}>
         <div className={`${styles.cellHead}`}>
           <Heading type={HeadingTypes.H2} startIcon='/icons/toolkit.svg'>
             My development <span className={styles.orange}>Toolkit</span>
@@ -137,15 +145,15 @@ const Home = async () => {
           <p>Explore the powerful tools and technologies I use to bring ideas to life.</p>
         </div>
         <div className={`${styles.technologies}`}>
-            <TechLink logo='/images/next.svg' name='Next.js' />
-            <TechLink logo='/images/prisma.svg' name='Prisma' />
-            <TechLink className={`${styles.third} ${styles.full}`} logo='/images/github.svg' name='GitHub' />
-            <TechLink className={styles.third} logo='/images/figma.svg' name='Figma' />
-            <TechLink className={styles.third} logo='/images/notion.svg' name='Notion' />
+          <TechLink logo='/images/next.svg' name='Next.js' />
+          <TechLink logo='/images/prisma.svg' name='Prisma' />
+          <TechLink className={`${styles.third} ${styles.full}`} logo='/images/github.svg' name='GitHub' />
+          <TechLink className={styles.third} logo='/images/figma.svg' name='Figma' />
+          <TechLink className={styles.third} logo='/images/notion.svg' name='Notion' />
         </div>
-      </div>
+      </RevealMotion>
 
-      <div className={`${bentoStyles.bentoCell} ${bentoStyles.halfWidth} ${styles.testimonialsSection}`}>
+      <RevealMotion variants={getRevealVariants(From.BOTTOM, 0.2)} className={`${bentoStyles.bentoCell} ${bentoStyles.halfWidth} ${styles.testimonialsSection}`}>
         <div className={`${styles.cellHead} ${styles.testimonialsHead}`}>
           <Heading type={HeadingTypes.H2} startIcon='/icons/stars.svg'>
             Some <span className={styles.orange}>Testimonials</span>
@@ -172,9 +180,9 @@ const Home = async () => {
             authorJob='IT Manager'
           />
         </Marquee>
-      </div>
+      </RevealMotion>
 
-      <ContactSection/>
+      <ContactSection />
     </>
   );
 };

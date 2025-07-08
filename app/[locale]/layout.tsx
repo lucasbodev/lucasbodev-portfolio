@@ -1,7 +1,6 @@
 import React from 'react';
 import '@/app/globals.css';
 import { Providers } from '@/app/providers';
-import '@/styles/animations/gsap-config';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from "@vercel/analytics/react";
 import { NextIntlClientProvider } from 'next-intl';
@@ -13,6 +12,7 @@ import localFont from 'next/font/local';
 import bentoStyles from '@/styles/ui/bento.module.css';
 import Nav from '@/components/nav/nav.component';
 import Menu from '@/components/menu/menu.component';
+import { From } from '@/components/reveal-motion/variants';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -60,9 +60,9 @@ const LocaleLayout = async (
         <NextIntlClientProvider messages={messages}>
           <Providers>
             <main className={bentoStyles.bento}>
-              <Nav/>
+              <Nav reveal={From.TOP}/>
               {children}
-              <Nav/>
+              <Nav reveal={From.BOTTOM}/>
             </main>
             <Menu/>
             <SpeedInsights />

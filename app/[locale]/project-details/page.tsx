@@ -6,12 +6,14 @@ import Heading, { HeadingTypes } from "@/components/heading/heading.component";
 import { Link } from "@/i18n/routing";
 import BulletedList from "@/components/bulleted-list/bulleted-list.component";
 import TechLink, { TechLinkProps } from "@/components/tech-link/tech-link.component";
+import RevealMotion from "@/components/reveal-motion/reveal-motion";
+import { getRevealVariants, From } from "@/components/reveal-motion/variants";
 
 const ProjectDetails = () => {
 
     return (
         <>
-            <div className={`${bentoStyles.bentoCell} ${styles.projectPin}`}>
+            <RevealMotion variants={getRevealVariants(From.LEFT)} className={`${bentoStyles.bentoCell} ${styles.projectPin}`}>
                 <div className={`${styles.pinHead}`}>
                     <Link href={'/projects'} className={`${styles.backLink}`}>
                         <Image src={'/icons/arrow-left.svg'} height={16} width={16} alt="Back icon" />
@@ -46,25 +48,25 @@ const ProjectDetails = () => {
                         <span>2025</span>
                     </div>
                 </div>
-            </div>
+            </RevealMotion>
             <div className={`${styles.projectDetails}`}>
-                <div className={`${styles.imgContainer}`}>
+                <RevealMotion variants={getRevealVariants(From.TOP, 0.1)} mobileVariants={getRevealVariants(From.BOTTOM, 0.1)} className={`${styles.imgContainer}`}>
                     <Image
                         width={1080}
                         height={1080}
                         alt='Project thumbnail'
                         src={'/images/memory-wall-thumbnail.png'}
                     />
-                </div>
-                <div className={`${styles.imgContainer}`}>
+                </RevealMotion>
+                <RevealMotion variants={getRevealVariants(From.RIGHT, 0.2)} mobileVariants={getRevealVariants(From.BOTTOM, 0.2)}className={`${styles.imgContainer}`}>
                     <Image
                         width={1080}
                         height={1080}
                         alt='Project thumbnail'
                         src={'/images/memory-wall-list.png'}
                     />
-                </div>
-                <div className={`${bentoStyles.bentoCell} ${styles.descriptionBox}`}>
+                </RevealMotion>
+                <RevealMotion variants={getRevealVariants(From.BOTTOM, 0.4)} className={`${bentoStyles.bentoCell} ${styles.descriptionBox}`}>
                     <div className={`${styles.description}`}>
                         <Heading type={HeadingTypes.H3}>Problème à résoudre:</Heading>
                         <p>L’entreprise dispose d’un grand nombre de photos d’époque dans son établissement et veut attirer de la clientèle grâce à celles-ci. </p>
@@ -79,8 +81,8 @@ const ProjectDetails = () => {
                             ]
                         } />
                     </div>
-                </div>
-                <div className={`${styles.imgContainer} ${styles.fullWidth}`}>
+                </RevealMotion>
+                <RevealMotion variants={getRevealVariants(From.BOTTOM)} className={`${styles.imgContainer} ${styles.fullWidth}`}>
                     <Image
                         width={1080}
                         height={1080}
@@ -99,8 +101,8 @@ const ProjectDetails = () => {
                         alt='Project thumbnail'
                         src={'/images/soldier-details-2.png'}
                     />
-                </div>
-                <div className={`${bentoStyles.bentoCell} ${styles.descriptionBox}`}>
+                </RevealMotion>
+                <RevealMotion variants={getRevealVariants(From.BOTTOM)} className={`${bentoStyles.bentoCell} ${styles.descriptionBox}`}>
                     <div className={`${styles.description}`}>
                         <Heading type={HeadingTypes.H3}>Solution apportée:</Heading>
                         <p>Grâce au concept de mur interactif arborant des QR codes sous les photos des soldats, des partenariats sont maintenant possibles avec les musées de la ville afin de rediriger les fin de visites vers le bar.</p>
@@ -115,24 +117,24 @@ const ProjectDetails = () => {
                             ]
                         } />
                     </div>
-                </div>
-                <div className={`${styles.imgContainer}`}>
+                </RevealMotion>
+                <RevealMotion variants={getRevealVariants(From.BOTTOM)} className={`${styles.imgContainer}`}>
                     <Image
                         width={1080}
                         height={1080}
                         alt='Project thumbnail'
                         src={'/images/memory-wall-languages.png'}
                     />
-                </div>
-                <div className={`${styles.imgContainer}`}>
+                </RevealMotion>
+                <RevealMotion variants={getRevealVariants(From.BOTTOM, 0.2)} className={`${styles.imgContainer}`}>
                     <Image
                         width={1080}
                         height={1080}
                         alt='Project thumbnail'
                         src={'/images/memory-wall-qr.png'}
                     />
-                </div>
-                <div className={`${bentoStyles.bentoCell} ${styles.techBox}`}>
+                </RevealMotion>
+                <RevealMotion variants={getRevealVariants(From.BOTTOM)} className={`${bentoStyles.bentoCell} ${styles.techBox}`}>
                     <Heading type={HeadingTypes.H3}>Technologies utilisées:</Heading>
                     <div className={`${styles.techList}`}>
                         {
@@ -151,7 +153,7 @@ const ProjectDetails = () => {
                             ))
                         }
                     </div>
-                </div>
+                </RevealMotion>
             </div>
         </>
     );

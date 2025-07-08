@@ -152,6 +152,10 @@
   padding-inline: var(--space-4);
 }
 
+.cardLayout {
+  height: 100%;
+}
+
 @media (max-width: 1024px) {
   .hero {
     padding-right: var(--space-4);

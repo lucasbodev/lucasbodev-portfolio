@@ -3,13 +3,19 @@ import bentoStyles from "@/styles/ui/bento.module.css";
 import styles from "@/components/nav/nav.module.css";
 import Avatar from "../avatar/avatar.component";
 import Icon, { IconSizes } from "../icon/icon.component";
+import RevealMotion from "../reveal-motion/reveal-motion";
+import { From, getRevealVariants } from "../reveal-motion/variants";
 
-const Nav = () => {
+interface NavProps {
+    reveal: From
+}
+
+const Nav = ({ reveal }: NavProps) => {
 
     return (
-        <div className={`${bentoStyles.bentoCell} ${bentoStyles.fullWidth} ${styles.nav}`}>
+        <RevealMotion variants={getRevealVariants(reveal, 0.4, 20)} className={`${bentoStyles.bentoCell} ${bentoStyles.fullWidth} ${styles.nav}`}>
             <div className={`${styles.profile}`}>
-                <Avatar src="/images/avatar.png"/>
+                <Avatar src="/images/avatar.png" />
                 <div className={`${styles.infos}`}>
                     <span className={`${styles.name}`}>Lucas Bodet</span>
                     <span className={`${styles.job}`}>Full Stack Developer</span>
@@ -17,9 +23,9 @@ const Nav = () => {
             </div>
             <div className={`${styles.languageSwitcher}`}>
                 <span>FR</span>
-                <Icon src="/icons/arrow-up.svg" size={IconSizes.MEDIUM}/>
+                <Icon src="/icons/arrow-up.svg" size={IconSizes.MEDIUM} />
             </div>
-        </div>
+        </RevealMotion>
     );
 }
 

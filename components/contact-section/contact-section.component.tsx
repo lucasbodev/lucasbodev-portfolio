@@ -4,12 +4,15 @@ import styles from "@/components/contact-section/contact-section.module.css";
 import Heading, { HeadingTypes } from "../heading/heading.component";
 import TechLink from "../tech-link/tech-link.component";
 import Image from "next/image";
+import RevealMotion from "../reveal-motion/reveal-motion";
+import { From, getRevealVariants } from "../reveal-motion/variants";
+// import { fromBottomVariants, fromRightVariants } from "../reveal-motion/variants";
 
 const ContactSection = () => {
 
     return (
         <>
-            <div className={`${bentoStyles.bentoCell} ${styles.contact}`}>
+            <RevealMotion variants={getRevealVariants(From.BOTTOM)} className={`${bentoStyles.bentoCell} ${styles.contact}`}>
                 <div className={`${styles.cellHead}`}>
                     <Heading type={HeadingTypes.H1} startIcon='/icons/mail.svg'>
                         Let's <span className={styles.orange}>Get in touch !</span>
@@ -31,8 +34,8 @@ const ContactSection = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className={`${bentoStyles.bentoCell} ${styles.contactImg}`}>
+            </RevealMotion>
+            <RevealMotion variants={getRevealVariants(From.RIGHT, 0.2)} className={`${bentoStyles.bentoCell} ${styles.contactImg}`}>
                 <Image
                     width={1080}
                     height={1080}
@@ -40,7 +43,7 @@ const ContactSection = () => {
                     src={'/images/bye.png'}
                     className={styles.bye}
                 />
-            </div>
+            </RevealMotion>
         </>
     );
 }

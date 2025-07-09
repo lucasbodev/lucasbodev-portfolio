@@ -1,6 +1,6 @@
 import React from "react";
-import bentoStyles from "@/styles/ui/bento.module.css";
 import styles from "@/components/contact-section/contact-section.module.css";
+import bentoStyles from "@/styles/ui/bento.module.css";
 import Heading, { HeadingTypes } from "../heading/heading.component";
 import TechLink from "../tech-link/tech-link.component";
 import Image from "next/image";

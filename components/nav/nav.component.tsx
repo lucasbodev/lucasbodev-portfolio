@@ -1,6 +1,6 @@
 import React from "react";
-import bentoStyles from "@/styles/ui/bento.module.css";
 import styles from "@/components/nav/nav.module.css";
+import bentoStyles from "@/styles/ui/bento.module.css";
 import Avatar from "../avatar/avatar.component";
 import Icon, { IconSizes } from "../icon/icon.component";
 import RevealMotion from "../reveal-motion/reveal-motion";

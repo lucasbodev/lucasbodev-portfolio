@@ -57,7 +57,7 @@ const PinProjectDetails = ({ children }: PinProjectDetailsProps) => {
                         const pinWrapper = pinWrapperRef.current;
 
                         if (pin && pinWrapper) {
-                            pin.style = "";
+                            pin.removeAttribute("style");
                             pinWrapper.style.alignItems = "end";
                         }
                     },
@@ -66,7 +66,7 @@ const PinProjectDetails = ({ children }: PinProjectDetailsProps) => {
                         const pinWrapper = pinWrapperRef.current;
 
                         if (pin && pinWrapper) {
-                            pin.style = "";
+                            pin.removeAttribute("style");
                             pinWrapper.style.alignItems = "start";
                         }
                     }

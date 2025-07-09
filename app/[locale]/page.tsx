@@ -25,7 +25,7 @@ interface ProjectCard {
   description: string
 }
 
-const Home = async () => {
+const Home = () => {
 
   // const t = await getTranslations('Home');
 

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { forwardRef } from "react";
 import { HTMLMotionProps, motion } from "motion/react";
 import { useIsMobile } from "@/lib/context/MobileContext";
 import { RevealVariants } from "./variants";
@@ -10,25 +10,24 @@ interface RevealMotionProps extends HTMLMotionProps<"div"> {
     children: React.ReactNode
 }
 
-const RevealMotion = ({ mobileVariants, children, ...props }: RevealMotionProps) => {
+const RevealMotion = forwardRef<HTMLDivElement, RevealMotionProps>(({ mobileVariants, children, ...props }, ref) => {
 
-    const { variants, initial = "hidden", whileInView = "visible", viewport = { once: true, amount: 0.2 }, className } = props;
+    const { variants, initial = "hidden", whileInView = "visible", viewport = { once: true, amount: 0.2 }, className, style } = props;
     const isMobile = useIsMobile();
-    if (isMobile === undefined) {
-        return <div className={className} style={{ visibility: 'hidden' }}>{children}</div>
-    }
 
     return (
         <motion.div
+            ref={ref}
             variants={isMobile && mobileVariants ? mobileVariants : variants}
             initial={initial}
             whileInView={whileInView}
             viewport={viewport}
             className={className}
+            style={style}
         >
             {children}
         </motion.div>
     );
-}
+});
 
 export default RevealMotion;

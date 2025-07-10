@@ -10,6 +10,7 @@ export const sendMail = async (prevState: any, formData: FormData) => {
     if (submission.status !== 'success') return submission.reply();
 
     try {
+        console.log('API_KEY:', process.env.RESEND_API_KEY);
         const resend = new Resend(process.env.RESEND_API_KEY);
         resend.emails.send({
             from: 'onboarding@resend.dev',

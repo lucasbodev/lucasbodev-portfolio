@@ -3,7 +3,7 @@
     flex-direction: row !important;
     align-items: center;
     justify-content: space-between;
-    padding-block: var(--space-2);
+    padding-block: var(--space-2) !important;
 }
 
 .profile {

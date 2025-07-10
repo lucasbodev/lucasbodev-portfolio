@@ -7,6 +7,8 @@ import TechLink from "@/components/tech-link/tech-link.component";
 import Button from "@/components/button/button.component";
 import RevealMotion from "@/components/reveal-motion/reveal-motion";
 import { getRevealVariants, From } from "@/components/reveal-motion/variants";
+import { sendMail } from "@/actions/mail-actions";
+import ContactForm from "@/components/contact-form/contact-form.component";
 
 
 const Contact = () => {
@@ -33,14 +35,7 @@ const Contact = () => {
                         Don’t just take our word for it—see what others are saying about how this template transformed their online presence.
                     </p>
                 </div>
-                <form className={`${styles.contactForm}`}>
-                    <div className={`${styles.inputs}`}>
-                        <input className={styles.input} type="text" placeholder="Your name" />
-                        <input className={styles.input} type="text" placeholder="Your email" />
-                        <textarea className={styles.input} rows={5} placeholder="Leave me a message..." />
-                    </div>
-                    <Button text="Send message" />
-                </form>
+                <ContactForm/>
             </RevealMotion>
             <RevealMotion variants={getRevealVariants(From.BOTTOM, 0.3)} className={`${bentoStyles.bentoCell} ${styles.contactImg}`}>
                 <Image

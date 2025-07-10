@@ -1,0 +1,30 @@
+.field {
+    width: 100%;
+}
+
+.label {
+    display: block;
+    margin-bottom: var(--spacing-1);
+    font-weight: 500;
+}
+
+.input {
+    padding: var(--space-4);
+    background-color: var(--secondary-color-900);
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+.input:focus {
+    outline-color: var(--primary-color-500);
+}
+
+.inputError {
+    outline: 1px solid #d25e5a !important;
+}
+
+.error {
+    color: var(--color-error, #d25e5a);
+    font-size: 0.75rem;
+    margin-top: var(--spacing-1);
+}

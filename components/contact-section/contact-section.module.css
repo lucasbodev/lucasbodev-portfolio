@@ -5,9 +5,8 @@
 .contact {
   grid-column: 1 / span 8;
   gap: var(--space-7);
-  height: min-content;
-  /* height: 100%;
-  justify-content: space-between; */
+  height: 100%;
+  justify-content: space-between;
 }
 
 .contactLinks {
@@ -70,7 +69,7 @@
 
 .contactImg {
   grid-column: span 4;
-  padding: 0;
+  padding: 0 !important;
   flex-flow: column-reverse;
 }
 
@@ -96,6 +95,9 @@
 }
 
 @media (max-width: 768px) {
+  .contact {
+    height: min-content;
+  }
   .contactLinks {
     flex-direction: column;
   }

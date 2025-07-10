@@ -12,7 +12,7 @@ export const sendMail = async (prevState: any, formData: FormData) => {
     try {
         const resend = new Resend(process.env.RESEND_API_KEY);
         await resend.emails.send({
-            from: 'onboarding@resend.dev',
+            from: 'portfolio@resend.dev',
             to: 'lucasbodet.dev@gmail.com',
             subject: `Message de ${submission.value.name} (${submission.value.email})`,
             html: `<p>${submission.value.message}</p>`

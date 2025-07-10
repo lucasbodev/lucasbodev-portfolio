@@ -12,7 +12,7 @@ export const sendMail = async (prevState: any, formData: FormData) => {
     try {
         console.log('API_KEY:', process.env.RESEND_API_KEY);
         const resend = new Resend(process.env.RESEND_API_KEY);
-        resend.emails.send({
+        await resend.emails.send({
             from: 'onboarding@resend.dev',
             to: 'lucasbodet.dev@gmail.com',
             subject: `Message de ${submission.value.name} (${submission.value.email})`,

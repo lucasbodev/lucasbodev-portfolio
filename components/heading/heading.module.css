@@ -1,7 +1,9 @@
 .heading {
     font-family: var(--font-climate-crisis);
+    /* font-family: var(--font-caveat); */
+
     color: var(--black);
-    font-variation-settings: "YEAR" 1985;
+    /* font-variation-settings: "YEAR" 1985; */
     line-height: 1;
 
     &.h1 {

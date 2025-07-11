@@ -10,13 +10,13 @@ import { routing } from '@/i18n/routing';
 import { Toaster } from 'react-hot-toast';
 import localFont from 'next/font/local';
 import bentoStyles from '@/styles/ui/bento.module.css';
-import Nav from '@/components/nav/nav.component';
+import Nav, { DropdownPosition } from '@/components/nav/nav.component';
 import Menu from '@/components/menu/menu.component';
 import { From } from '@/components/reveal-motion/variants';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'Metadata' });
+  // const { locale } = await params;
+  // const t = await getTranslations({ locale, namespace: 'Metadata' });
 
   return {
     title: 'Portfolio - Lucas Bodet',
@@ -31,6 +31,12 @@ const climateCrisis = localFont({
   src: '../fonts/ClimateCrisis.ttf',
   display: 'swap',
   variable: '--font-climate-crisis'
+});
+
+const caveat = localFont({
+  src: '../fonts/Caveat.ttf',
+  display: 'swap',
+  variable: '--font-caveat'
 });
 
 const funnelDisplay = localFont({
@@ -56,13 +62,13 @@ const LocaleLayout = async (
 
   return (
     <html lang={locale}>
-      <body className={`${climateCrisis.variable} ${funnelDisplay.variable}`}>
+      <body className={`${climateCrisis.variable} ${funnelDisplay.variable} ${caveat.variable}`}>
         <NextIntlClientProvider messages={messages}>
           <Providers>
             <main className={bentoStyles.bento}>
-              <Nav reveal={From.TOP}/>
+              <Nav reveal={From.TOP} dropdownPosition={DropdownPosition.BOTTOM}/>
               {children}
-              <Nav reveal={From.BOTTOM}/>
+              <Nav reveal={From.BOTTOM} dropdownPosition={DropdownPosition.TOP}/>
             </main>
             <Menu/>
             <SpeedInsights />

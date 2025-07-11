@@ -12,7 +12,7 @@ interface RevealMotionProps extends HTMLMotionProps<"div"> {
 
 const RevealMotion = forwardRef<HTMLDivElement, RevealMotionProps>(({ mobileVariants, children, ...props }, ref) => {
 
-    const { variants, initial = "hidden", whileInView = "visible", viewport = { once: true, amount: 0.2 }, className, style } = props;
+    const { variants, initial = "hidden", whileInView = "visible", viewport = { once: true }, className, style } = props;
     const isMobile = useIsMobile();
 
     return (

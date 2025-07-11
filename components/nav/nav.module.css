@@ -4,6 +4,8 @@
     align-items: center;
     justify-content: space-between;
     padding-block: var(--space-2) !important;
+    position: relative;
+    overflow: visible;
 }
 
 .profile {

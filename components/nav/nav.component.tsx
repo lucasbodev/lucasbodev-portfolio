@@ -5,12 +5,19 @@ import Avatar from "../avatar/avatar.component";
 import Icon, { IconSizes } from "../icon/icon.component";
 import RevealMotion from "../reveal-motion/reveal-motion";
 import { From, getRevealVariants } from "../reveal-motion/variants";
+import Languages from "../languages/languages.component";
 
-interface NavProps {
-    reveal: From
+export enum DropdownPosition {
+    TOP = "top",
+    BOTTOM = "bottom"
 }
 
-const Nav = ({ reveal }: NavProps) => {
+interface NavProps {
+    reveal: From,
+    dropdownPosition: DropdownPosition
+}
+
+const Nav = ({ reveal, dropdownPosition }: NavProps) => {
 
     return (
         <RevealMotion variants={getRevealVariants(reveal, 0.4, 20)} className={`${bentoStyles.bentoCell} ${bentoStyles.fullWidth} ${styles.nav}`}>
@@ -21,10 +28,7 @@ const Nav = ({ reveal }: NavProps) => {
                     <span className={`${styles.job}`}>Full Stack Developer</span>
                 </div>
             </div>
-            <div className={`${styles.languageSwitcher}`}>
-                <span>FR</span>
-                <Icon src="/icons/arrow-up.svg" size={IconSizes.MEDIUM} />
-            </div>
+            <Languages position={dropdownPosition}/>
         </RevealMotion>
     );
 }

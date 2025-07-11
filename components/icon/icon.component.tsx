@@ -1,5 +1,5 @@
-import React from 'react';
-import Image from 'next/image';
+import React, { HtmlHTMLAttributes } from 'react';
+import Image, { ImageProps } from 'next/image';
 
 export enum IconSizes {
     SMALLEST = 0.5,
@@ -9,8 +9,13 @@ export enum IconSizes {
     LARGEST = 2.125,
 }
 
-const Icon = ({ src, size }: { src?: string, size: IconSizes }) => {
+interface IconProps extends HtmlHTMLAttributes<HTMLImageElement> {
+    src?: string;
+    size: IconSizes,
+}
 
+const Icon = ({ src, size, ...props }: IconProps) => {
+    const { className } = props;
     return (
         src &&
         <Image
@@ -18,6 +23,8 @@ const Icon = ({ src, size }: { src?: string, size: IconSizes }) => {
             alt="Icon"
             width={size * 16}
             height={size * 16}
+            className={className}
+
             style={{
                 width: `${size}rem`,
                 minWidth: `${size}rem`,

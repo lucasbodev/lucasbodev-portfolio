@@ -8,6 +8,7 @@
   --primary-color: #F48734;
   --primary-color-500: #EEC4A5;
   --primary-color-750: #F8E8DC;
+  --primary-color-800: #fcf5f0;
   --primary-color-900: #FEFAF7;
   --secondary-gradient: linear-gradient(354deg, rgba(168, 207, 237, 1) 0%, rgba(235, 243, 249, 1) 100%);
   --secondary-color: #A8CFED;
@@ -114,6 +115,8 @@ p {
 
 label {
   font-family: var(--font-climate-crisis);
+  /* font-family: var(--font-caveat); */
+
   font-variation-settings: "YEAR" 1985;
 }
 

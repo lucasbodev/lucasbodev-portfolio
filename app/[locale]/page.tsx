@@ -13,6 +13,7 @@ import Testimonial from '@/components/testimonial/testimonial.component';
 import ContactSection from '@/components/contact-section/contact-section.component';
 import RevealMotion from '@/components/reveal-motion/reveal-motion';
 import { From, getRevealVariants } from '@/components/reveal-motion/variants';
+import { useTranslations } from 'next-intl';
 
 interface Collaboration {
   logo: string,
@@ -27,23 +28,29 @@ interface ProjectCard {
 
 const Home = () => {
 
-  // const t = await getTranslations('Home');
+  const t = useTranslations('Home');
+
+  const richTranslation = (name: string) => {
+    return t.rich(name, {
+      orange: (chunks) => <span className={styles.orange}>{chunks}</span>,
+      br: () => <br />
+    });
+  }
 
   return (
     <>
       <RevealMotion variants={getRevealVariants(From.LEFT)} className={`${bentoStyles.bentoCell} ${styles.hero}`}>
         <Bulleted startIcon='/icons/calendar.svg' iconSize={IconSizes.LARGER}>
-          <span className={styles.disponibility}>Available for hire</span>
+          <span className={styles.disponibility}>{t('hireMe')}</span>
         </Bulleted>
         <div className={`${styles.heroContent}`}>
           <Heading type={HeadingTypes.H1} style={{ lineHeight: '125%' }}>
-            Hello, <span className={styles.orange}>I’m Lucas -</span><br />
-            Full Stack Developer
+            {richTranslation('mainTitle')}
           </Heading>
           <p>As a creative developer, I blend code and design to build unique, user-centric experiences. Let's turn your ideas into a dynamic and engaging digital reality!</p>
         </div>
         <Bulleted startIcon='/icons/location.svg' iconSize={IconSizes.LARGER}>
-          <span className={styles.disponibility}>Bastogne, Belgium</span>
+          <span className={styles.disponibility}>{t('location')}</span>
         </Bulleted>
       </RevealMotion>
 

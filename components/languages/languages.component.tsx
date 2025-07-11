@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, routing, usePathname } from '@/i18n/routing';
 import { useLocale } from 'next-intl';
 import { useParams } from 'next/navigation';
@@ -24,6 +24,8 @@ interface LanguagesProps {
 const Languages = ({ position }: LanguagesProps) => {
 
     const [open, setOpen] = useState(false);
+    const dropdownRef = useRef<HTMLDivElement>(null);
+    const buttonRef = useRef<HTMLButtonElement>(null);
 
     const currentLocale = useLocale();
 
@@ -31,18 +33,35 @@ const Languages = ({ position }: LanguagesProps) => {
 
     const params = useParams();
 
-    console.log(currentLocale)
-    console.log(routing.locales)
+    useEffect(() => {
+        function handleClickOutside(event: MouseEvent) {
+            const target = event.target as Node;
+            if (
+                open &&
+                dropdownRef.current &&
+                !dropdownRef.current.contains(target) &&
+                buttonRef.current &&
+                !buttonRef.current.contains(target)
+            ) {
+                setOpen(false);
+            }
+        }
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [open]);
 
     return (
         <>
-            <button className={`${styles.languageSwitcher}`} onClick={() => open ? setOpen(false) : setOpen(true)} >
+            <button ref={buttonRef} className={`${styles.languageSwitcher}`} onClick={() => setOpen((prev) => !prev)}>
                 <span>{currentLocale.toUpperCase()}</span>
                 <Icon src="/icons/arrow-up.svg" size={IconSizes.MEDIUM} className={`${styles.arrowIcon} ${position === DropdownPosition.TOP ? styles.top : styles.bottom} ${open ? styles.open : null}`} />
             </button>
-            <div className={`${bentoStyles.bentoCell} ${styles.languagesDropdown} ${position === DropdownPosition.TOP ? styles.top : styles.bottom} ${open ? styles.open : null}`}>
+            <div ref={dropdownRef} className={`${bentoStyles.bentoCell} ${styles.languagesDropdown} ${position === DropdownPosition.TOP ? styles.top : styles.bottom} ${open ? styles.open : null}`}>
                 {routing.locales.map((locale) => (
-                    <Link onClick={() => setOpen(false)} onBlur={() => setOpen(false)} key={locale} locale={locale} className={styles.languageItem} href={{
+                    <Link key={locale} locale={locale} className={styles.languageItem} href={{
                         pathname: pathname as any,
                         // params: params as any,
                     }}>
@@ -50,23 +69,7 @@ const Languages = ({ position }: LanguagesProps) => {
                     </Link>
                 ))}
             </div>
-            <div className={`${styles.overlay} ${open && styles.open}`} onClick={() => setOpen(false)}></div>
         </>
-        // <div className="dropdown dropdown-end">
-        //     <div tabIndex={0} role="button" className="btn btn-ghost m-1">{currentLocale.toUpperCase()}</div>
-        //     <ul tabIndex={0} className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-        // {routing.locales.map((locale) => (
-        //     <li key={locale}>
-        //         <Link locale={locale} href={{
-        //             pathname: pathname as any,
-        //             // params: params as any,
-        //         }}>
-        //             {locale.toUpperCase()}
-        //         </Link>
-        //     </li>
-        // ))}
-        //     </ul>
-        // </div>
     );
 };
 

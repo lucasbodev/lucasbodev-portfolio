@@ -1,15 +1,14 @@
 import React from "react";
 import bentoStyles from "@/styles/ui/bento.module.css";
 import styles from "@/app/[locale]/projects/projects.module.css";
-import Bulleted from "@/components/bulleted/bulleted.component";
 import Heading, { HeadingTypes } from "@/components/heading/heading.component";
-import { IconSizes } from "@/components/icon/icon.component";
 import Image from "next/image";
 import Avatar from "@/components/avatar/avatar.component";
 import ProjectCard from "@/components/project-card/project-card.component";
 import ContactSection from "@/components/contact-section/contact-section.component";
 import RevealMotion from "@/components/reveal-motion/reveal-motion";
 import { getRevealVariants, From } from "@/components/reveal-motion/variants";
+import { useTranslations } from "next-intl";
 
 interface ProjectCard {
     img: string,
@@ -18,6 +17,8 @@ interface ProjectCard {
 }
 
 const Projects = () => {
+
+    // const t = useTranslations('')
 
     return (
         <>

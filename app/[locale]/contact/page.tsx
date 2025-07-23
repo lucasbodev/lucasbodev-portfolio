@@ -32,7 +32,7 @@ const Contact = () => {
                         {t('connectSubtitle')}
                     </p>
                 </div>
-                <TechLink logo={'/images/linkedin.svg'} name='Linkedin' />
+                <TechLink logo={'/images/linkedin.svg'} name='Linkedin' url="https://www.linkedin.com/in/lucas-bodet-20044326a/"/>
             </RevealMotion>
             <RevealMotion variants={getRevealVariants(From.RIGHT, 0.2)} className={`${bentoStyles.bentoCell} ${styles.contactFormCell}`}>
                 <div className={styles.cellHead}>

@@ -4,24 +4,32 @@ import styles from "@/app/[locale]/contact/contact.module.css";
 import Heading, { HeadingTypes } from "@/components/heading/heading.component";
 import Image from "next/image";
 import TechLink from "@/components/tech-link/tech-link.component";
-import Button from "@/components/button/button.component";
 import RevealMotion from "@/components/reveal-motion/reveal-motion";
 import { getRevealVariants, From } from "@/components/reveal-motion/variants";
-import { sendMail } from "@/actions/mail-actions";
 import ContactForm from "@/components/contact-form/contact-form.component";
+import { useTranslations } from "next-intl";
 
 
 const Contact = () => {
+
+    const t = useTranslations('Contact');
+
+    const richTranslation = (name: string) => {
+        return t.rich(name, {
+            orange: (chunks) => <span className={styles.orange}>{chunks}</span>,
+            br: () => <br />
+        });
+    }
 
     return (
         <div className={`${styles.contactGrid}`}>
             <RevealMotion variants={getRevealVariants(From.LEFT, 0.1)} className={`${bentoStyles.bentoCell} ${styles.contactLinks}`}>
                 <div className={styles.cellHead}>
                     <Heading type={HeadingTypes.H1} startIcon={'/icons/connect.svg'}>
-                        Let's <span className={styles.orange}>Connect!</span>
+                        {richTranslation('connect')}
                     </Heading>
                     <p>
-                        Don’t just take our word for it—see what others are saying about how this template transformed their online presence.
+                        {t('connectSubtitle')}
                     </p>
                 </div>
                 <TechLink logo={'/images/linkedin.svg'} name='Linkedin' />
@@ -29,13 +37,13 @@ const Contact = () => {
             <RevealMotion variants={getRevealVariants(From.RIGHT, 0.2)} className={`${bentoStyles.bentoCell} ${styles.contactFormCell}`}>
                 <div className={styles.cellHead}>
                     <Heading type={HeadingTypes.H1} startIcon={'/icons/mail.svg'}>
-                        Get in <span className={styles.orange}>Touch:</span>
+                        {richTranslation('getInTouchTitle')}
                     </Heading>
                     <p>
-                        Don’t just take our word for it—see what others are saying about how this template transformed their online presence.
+                        {t('getInTouchSubtitle')}
                     </p>
                 </div>
-                <ContactForm/>
+                <ContactForm />
             </RevealMotion>
             <RevealMotion variants={getRevealVariants(From.BOTTOM, 0.3)} className={`${bentoStyles.bentoCell} ${styles.contactImg}`}>
                 <Image

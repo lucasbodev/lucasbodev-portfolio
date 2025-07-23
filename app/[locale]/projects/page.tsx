@@ -11,6 +11,7 @@ import { getRevealVariants, From } from "@/components/reveal-motion/variants";
 import { useTranslations } from "next-intl";
 
 interface ProjectCard {
+    id?: string;
     img: string,
     name: string,
     description: string
@@ -18,7 +19,14 @@ interface ProjectCard {
 
 const Projects = () => {
 
-    // const t = useTranslations('')
+    const t = useTranslations('Projects');
+
+    const richTranslation = (name: string) => {
+        return t.rich(name, {
+            orange: (chunks) => <span className={styles.orange}>{chunks}</span>,
+            br: () => <br />
+        });
+    }
 
     return (
         <>
@@ -26,10 +34,9 @@ const Projects = () => {
                 <Avatar src="/images/thumbsup-inverted.png" />
                 <div className={`${styles.heroContent}`}>
                     <Heading type={HeadingTypes.H1} style={{ lineHeight: '125%' }}>
-                        Take a look at the <span className={styles.orange}>Projects</span><br />
-                        I realized with <span className={styles.orange}>Passion</span>
+                        {richTranslation('projectsPageTitle')}
                     </Heading>
-                    <p>As a creative developer, I blend code and design to build unique, user-centric experiences. Let's turn your ideas into a dynamic and engaging digital reality!</p>
+                    <p>{t('projectsPageSubtitle')}</p>
                 </div>
             </RevealMotion>
 
@@ -49,13 +56,13 @@ const Projects = () => {
             <div className={styles.projectList}>
                 {
                     ([
-                        { img: '/images/hec-thumbnail.png', name: 'My Skills Logbook', description: 'Internship, development' },
-                        { img: '/images/memory-wall-thumbnail.png', name: 'Memory Wall', description: 'Ui design, development' },
-                        { img: '/images/h2a-thumbnail.png', name: 'H2A', description: 'Development' },
-                        { img: '/images/next-starter.png', name: 'Next Starter', description: 'Development' },
+                        { id: 'my-skills-logbook', img: '/images/hec-thumbnail.png', name: 'My Skills Logbook', description: 'Internship, development' },
+                        { id: 'memory-wall', img: '/images/memory-wall-thumbnail.png', name: 'Memory Wall', description: 'Ui design, development' },
+                        { id: 'h2a', img: '/images/h2a-thumbnail.png', name: 'H2A', description: 'Development' },
+                        { id: 'next-starter', img: '/images/next-starter.png', name: 'Next Starter', description: 'Development' },
                     ] as ProjectCard[]).map((project, index) => (
                         <RevealMotion key={index} variants={getRevealVariants(From.BOTTOM, 0.4 + index / 10)}>
-                            <ProjectCard img={project.img} name={project.name} description={project.description} vertical={true}/>
+                            <ProjectCard id={project.id} img={project.img} name={project.name} description={project.description} vertical={true} />
                         </RevealMotion>
                     ))
                 }

@@ -63,7 +63,7 @@ const Languages = ({ position }: LanguagesProps) => {
                 {routing.locales.map((locale) => (
                     <Link key={locale} locale={locale} className={styles.languageItem} href={{
                         pathname: pathname as any,
-                        // params: params as any,
+                        params: params as any,
                     }}>
                         {LanguageLabels[locale]}
                     </Link>

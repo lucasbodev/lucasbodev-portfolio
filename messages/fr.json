@@ -2,7 +2,93 @@
   "Home": {
     "mainTitle": "Bonjour, <orange> Je suis Lucas - </orange><br></br>Développeur Full Stack",
     "hireMe": "Disponible pour l'embauche",
-    "location": "Bastogne, Belgique"
+    "location": "Bastogne, Belgique",
+    "mainSubtitle": "Passionné, curieux et prêt à relever chaque défi technique. Je construis des expériences web fluides, robustes et élégantes. Et ce n’est que le début.",
+    "formationTitle": "Mon <orange>Diplôme</orange>",
+    "formationSubtitle": "Bachelier en développement d’applications",
+    "collabTitle": "Mes <orange>Collaborations</orange>",
+    "projectsTitle": "Mes projets <orange>réalisés</orange>",
+    "projectsSubtitle": "Voici les projets qui m’ont permis de progresser, d’expérimenter et de livrer des solutions concrètes.\nChaque ligne de code raconte une histoire de rigueur, de curiosité et de passion.",
+    "testimonialsTitle": "Quelques <orange>Témoignages</orange>",
+    "toolkitTitle": "Mes <orange>outils</orange> de développement",
+    "toolkitSubtitle": "J’aime tester, comparer, adopter les outils qui rendent mes projets plus efficaces, plus propres, plus scalables.\nVoici les technos qui me font vibrer aujourd’hui… et celles que je continue d’explorer.",
+    "testimonialsSubtitle": "Quelques mots de ceux qui m’ont fait confiance."
   },
-  "location": "Bastogne, Belgium"
+  "location": "Bastogne, Belgium",
+  "mainSubtitle": "Passionné, curieux et prêt à relever chaque défi technique. Je construis des expériences web fluides, robustes et élégantes. Et ce n’est que le début.",
+  "formationTitle": "Ma <span className={styles.orange}>Formation</span>",
+  "formationSubtitle": "Bachelier en développement d’applications",
+  "collabTitle": "Mes <span className={styles.orange}>Collaborations</span>",
+  "projectsTitle": "The projects <span className={styles.orange}>I realized</span>",
+  "projectsSubtitle": "Voici les projets qui m’ont permis de progresser, d’expérimenter et de livrer des solutions concrètes. Chaque ligne de code raconte une histoire de rigueur, de curiosité et de passion.",
+  "testimonialsTitle": "Some <span className={styles.orange}>Testimonials</span>",
+  "toolkitTitle": "My development <span className={styles.orange}>Toolkit</span>",
+  "toolkitSubtitle": "J’aime tester, comparer, adopter les outils qui rendent mes projets plus efficaces, plus propres, plus scalables. Voici les technos qui me font vibrer aujourd’hui… et celles que je continue d’explorer.",
+  "testimonialsSubtitle": "Quelques mots de ceux qui m’ont fait confiance.",
+  "contactSectionTitle": "Rentrons en <span className={styles.orange}>Contact!</span>",
+  "ContactSection": {
+    "contactSectionTitle": "Rentrons en <orange>Contact!</orange>",
+    "contactSectionSubtitle": "J’ai hâte de collaborer avec vous. Et de coder quelque chose de grand.",
+    "contactLinkLabel": "Contact"
+  },
+  "contactSectionSubtitle": "J’ai hâte de collaborer avec vous. Et de coder quelque chose de grand.",
+  "contactLinkLabel": "Contact",
+  "job": "Full Stack Developer",
+  "Nav": {
+    "job": "Développeur Full Stack"
+  },
+  "home": "Home",
+  "Menu": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "projects": "Projects",
+  "contact": "Contact",
+  "Projects": {
+    "projectsPageTitle": "Jetez un œil aux <orange>Projets</orange><br></br>que j'ai réalisés avec <orange>Passion </orange>",
+    "projectsPageSubtitle": "Chaque projet m’a appris quelque chose. J’y ai mis du temps, du code et un peu de moi."
+  },
+  "connect": "Let's <span className={styles.orange}>Connect!</span>",
+  "Contact": {
+    "connect": "<orange>Connectons</orange> nous!",
+    "connectSubtitle": "Je suis toujours partant pour élargir mon réseau ou relever de nouveaux défis.",
+    "getInTouchTitle": "Laissez moi <orange>un message:</orange>",
+    "getInTouchSubtitle": "Un projet, une mission ou une idée ? Je suis prêt à coder."
+  },
+  "contactError": "Un problème a été rencontré lors de l'envoi du message. Veuillez réessayer plus tard.",
+  "ContactForm": {
+    "contactError": "Un problème a été rencontré lors de l'envoi du message. Veuillez réessayer plus tard.",
+    "contactSuccess": "Merci pour votre message! Vous recevrez ma réponse au plus vite.",
+    "nameField": "Votre nom",
+    "emailField": "Votre e-mail",
+    "messageField": "Laissez-moi un message ...",
+    "sendButton": "Envoyer un message"
+  },
+  "contactSuccess": "Merci pour votre message! Vous recevrez ma réponse au plus vite.",
+  "nameField": "Your name",
+  "Project": {
+    "problem": "Problème à résoudre:",
+    "solution": "Solution apportée:",
+    "challenges": "Défis:",
+    "benefits": "Apports clés:",
+    "technologies": "Technologies utilisées:"
+  },
+  "solution": "Solution apportée:",
+  "challenges": "Défis:",
+  "benefits": "Apports clés:",
+  "technologies": "Technologies utilisées:",
+  "back": "Back to projects",
+  "PinProjectDetails": {
+    "back": "Retour aux projets",
+    "projectLink": "Lien vers le projet:",
+    "client": "Client:",
+    "industry": "Industrie:",
+    "services": "Services:",
+    "year": "Année:"
+  },
+  "client": "Client:",
+  "industry": "Industrie:",
+  "services": "Services:",
+  "year": "Year:"
 }

@@ -5,19 +5,19 @@ import styles from "@/components/project-card/project-card.module.css";
 import Heading, { HeadingTypes } from "../heading/heading.component";
 import { Link } from "@/i18n/routing";
 import Icon, { IconSizes } from "../icon/icon.component";
-// import Icon from '/icons/arrow-right.svg';
 
 interface ProjectCardProps {
+    id?: string;
     img: string,
     name: string,
     description: string,
     vertical?: boolean
 }
 
-const ProjectCard = ({ img, name, description, vertical = false }: ProjectCardProps) => {
+const ProjectCard = ({ id, img, name, description, vertical = false }: ProjectCardProps) => {
 
     return (
-        <Link href="/project-details" className={`${bentoStyles.bentoCell} ${styles.projectCardContainer}`}>
+        <Link href={`/project-details/${id}` as any} className={`${bentoStyles.bentoCell} ${styles.projectCardContainer}`}>
             <div className={`${styles.projectCard} ${vertical ? styles.vertical : null}`}>
                 <div className={`${styles.projectImgContainer} ${vertical ? styles.vertical : null}`}>
                     <Image

@@ -2,6 +2,62 @@
   "Home": {
     "mainTitle": "Hallo, <orange> Ech sinn de Lucas - </orange><br></br>Full Stack Entwéckler",
     "hireMe": "Verfügbar fir ze lounen",
-    "location": "Basiel, d'Belsch"
+    "location": "Basiel, d'Belsch",
+    "mainSubtitle": "Leidenschaftlech, virwëtzeg an prett all technesch Erausfuerderung opzehuelen. Ech bauen Flëssegkeet, robust an elegant Websäit Erfarungen. An dëst ass nëmmen den Ufank.",
+    "formationTitle": "Meng <orange>Diplom</orange>",
+    "formationSubtitle": "Applikatioun Entwécklungsgweedor",
+    "collabTitle": "Meng <orange>Kollaboratiounen</orange>",
+    "projectsTitle": "Meng <orange>Projeten duerchgefouert</orange>",
+    "projectsSubtitle": "Hei sinn d'Projeten déi erlaabt mech erlaabt ze verloossen, Experiment an liwweren Léisunge liwweren.\nAll Zeil vum Code erzielt eng Geschicht vu Rigor, Virwëtz a Leidenschaft.",
+    "testimonialsTitle": "E puer <orange>Testimonials</orange>",
+    "toolkitTitle": "Meng <orange>Tools</orange> Entwécklung",
+    "toolkitSubtitle": "Dat gären Test, vergläichen, adcaptéieren d'Titen déi meng Projete maachen, déi vill effektiv, méi schneiden.\nHei sinn d'Technik déi haut vibréieren déi haut vibréieren ... An déi ech weider entdecken.",
+    "testimonialsSubtitle": "E puer Wierder aus deenen, déi mech vertraut hunn."
+  },
+  "ContactSection": {
+    "contactSectionTitle": "Loosst eis <orange>a Kontakt kommen!</orange>",
+    "contactSectionSubtitle": "Ech kann net waarden op mat Iech ze kollaboréieren. An fir eppes grouss ze Code.",
+    "contactLinkLabel": "Kontaktéier"
+  },
+  "Nav": {
+    "job": "Voll Stack Entwéckler"
+  },
+  "Menu": {
+    "home": "Home",
+    "projects": "Projeten",
+    "contact": "Kontaktéier"
+  },
+  "Projects": {
+    "projectsPageTitle": "Kuckt Iech op déi <orange>Projekter</orange><br></br>Ech hu realiséiert mat <orange>Leidenschaft</orange>",
+    "projectsPageSubtitle": "All Projet huet mech eppes geléiert. Ech hunn eng laang Zäit gedauert, Code an e bësse vu mir."
+  },
+  "Contact": {
+    "connect": "Loosst eis <orange>verbannen!</orange>",
+    "connectSubtitle": "Ech sinn ëmmer prett mäi Netzwierk ze arbéieren oder nei Erausfuerderungen opzehuelen.",
+    "getInTouchTitle": "Gitt an <orange>Touch:</orange>",
+    "getInTouchSubtitle": "Ee Projet, eng Missioun oder eng Iddi? Ech si prett fir ze Code."
+  },
+  "ContactForm": {
+    "contactError": "E Problem gouf opgetaucht wann Dir de Message schéckt. Probéiert w.e.g. méi spéit nach eng Kéier.",
+    "contactSuccess": "Merci fir Äre Message! Dir kritt meng Äntwert sou séier wéi méiglech.",
+    "nameField": "Ären Numm",
+    "emailField": "Déng E-Mail",
+    "messageField": "Loosst mech mat enger Noriicht ...",
+    "sendButton": "Schécken Message"
+  },
+  "Project": {
+    "problem": "Problem fir ze léisen:",
+    "solution": "Léisung gëtt ugebueden:",
+    "challenges": "Fuerderungen:",
+    "benefits": "Keybänner:",
+    "technologies": "Technologien benotzt:"
+  },
+  "PinProjectDetails": {
+    "back": "Zréck op Projekter",
+    "projectLink": "Link zum Projet:",
+    "client": "Client:",
+    "industry": "Industrie:",
+    "services": "Servicer",
+    "year": "Joer:"
   }
 }

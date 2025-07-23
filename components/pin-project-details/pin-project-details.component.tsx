@@ -2,7 +2,7 @@
 
 import React, { useLayoutEffect, useRef } from "react";
 import bentoStyles from "@/styles/ui/bento.module.css";
-import styles from "@/app/[locale]/project-details/project-details.module.css";
+import styles from "@/components/pin-project-details/pin-project-details.module.css";
 import Image from "next/image";
 import Heading, { HeadingTypes } from "@/components/heading/heading.component";
 import { Link } from "@/i18n/routing";
@@ -11,12 +11,21 @@ import { getRevealVariants, From } from "@/components/reveal-motion/variants";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useIsMobile } from "@/lib/context/MobileContext";
+import { useTranslations } from "next-intl";
 
-interface PinProjectDetailsProps {
-    children: React.ReactNode
+export interface PinProjectDetailsProps {
+    children: React.ReactNode;
+    title: string;
+    description: string;
+    url?: string;
+    client: string;
+    industry: string;
+    services: string[];
+    year: number;
 }
 
-const PinProjectDetails = ({ children }: PinProjectDetailsProps) => {
+const PinProjectDetails = ({ children, title, description, url, client, industry, services, year }: PinProjectDetailsProps) => {
+    const t = useTranslations('PinProjectDetails');
     const pinRef = useRef<HTMLDivElement>(null);
     const pinWrapperRef = useRef<HTMLDivElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
@@ -87,35 +96,40 @@ const PinProjectDetails = ({ children }: PinProjectDetailsProps) => {
                     <div className={`${styles.pinHead}`}>
                         <Link href={'/projects'} className={`${styles.backLink}`}>
                             <Image src={'/icons/arrow-left.svg'} height={16} width={16} alt="Back icon" />
-                            <span>Back to projects</span>
+                            <span>{t('back')}</span>
                         </Link>
 
                         <div className={`${styles.pinContent}`}>
-                            <Heading type={HeadingTypes.H2}>Memory Wall</Heading>
-                            <p>As a creative developer, I blend code and design to build unique, user-centric experiences. Let's turn your ideas into a dynamic and engaging digital reality!</p>
-                            <div className={`${styles.projectLink}`}>
-                                <span><strong>Lien vers le projet:</strong></span>
-                                <span className={`${styles.link}`}>https://memory-wall-sepia.vercel.app/</span>
-                            </div>
+                            <Heading type={HeadingTypes.H2}>{title}</Heading>
+                            <p dangerouslySetInnerHTML={{ __html: description }}></p>
+                            {
+                                url ?
+                                    <div className={`${styles.projectLink}`}>
+                                        <span><strong>{t('projectLink')}</strong></span>
+                                        <a href={url} className={`${styles.link}`} target="_blank" rel="noopener noreferrer">{url}</a>
+                                    </div> : null
+                            }
                         </div>
                     </div>
 
                     <div className={`${styles.pinFooter}`}>
                         <div className={`${styles.pinFooterCell}`}>
-                            <label>Client:</label>
-                            <span>La Taverne au Carré</span>
+                            <label>{t('client')}</label>
+                            <span>{client}</span>
                         </div>
                         <div className={`${styles.pinFooterCell}`}>
-                            <label>Industrie:</label>
-                            <span>Horeca</span>
+                            <label>{t('industry')}</label>
+                            <span>{industry}</span>
                         </div>
                         <div className={`${styles.pinFooterCell}`}>
-                            <label>Services:</label>
-                            <span>Ui design, development</span>
+                            <label>{t('services')}</label>
+                            <span>
+                                {services.join(', ')}
+                            </span>
                         </div>
                         <div className={`${styles.pinFooterCell}`}>
-                            <label>Year:</label>
-                            <span>2025</span>
+                            <label>{t('year')}</label>
+                            <span>{year}</span>
                         </div>
                     </div>
                 </RevealMotion>

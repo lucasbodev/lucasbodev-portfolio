@@ -9,8 +9,11 @@ import FormField from "../form-field/form-field.component";
 import { MailValidator } from "@/models/validations/mail-validator";
 import toast from "react-hot-toast";
 import Toast from "../toast/toast.component";
+import { useTranslations } from "next-intl";
 
 const ContactForm = () => {
+
+    const t = useTranslations('ContactForm');
 
     const [lastResult, action, isPending] = useActionState(sendMail, undefined);
 
@@ -28,9 +31,9 @@ const ContactForm = () => {
         if (!lastResult) return;
         console.log("lastResult", lastResult)
         if (lastResult.error) {
-            toast.custom(<Toast message={`Un problème a été rencontré lors de l'envoi du message. Veuillez réessayer plus tard.`} type="error" />);
+            toast.custom(<Toast message={`${t('contactError')}`} type="error" />);
         } else {
-            toast.custom(<Toast message={`Merci pour votre message! Vous aurez ma réponse au plus vite.`} type="success" />);
+            toast.custom(<Toast message={`${t('contactSuccess')}`} type="success" />);
         }
     }, [lastResult])
 
@@ -42,11 +45,11 @@ const ContactForm = () => {
                 className={`${styles.contactForm}`}
                 action={action}>
                 <div className={`${styles.inputs}`}>
-                    <FormField meta={fields.name} placeholder="Your name" disabled={isPending}/>
-                    <FormField meta={fields.email} placeholder="Your email" disabled={isPending}/>
-                    <FormField meta={fields.message} as="textarea" rows={5} placeholder="Leave me a message..." disabled={isPending}/>
+                    <FormField meta={fields.name} placeholder={t('nameField')} disabled={isPending} />
+                    <FormField meta={fields.email} placeholder={t('emailField')} disabled={isPending} />
+                    <FormField meta={fields.message} as="textarea" rows={5} placeholder={t('messageField')} disabled={isPending} />
                 </div>
-                <Button type="submit" text="Send message" disabled={isPending} />
+                <Button type="submit" text={t('sendButton')} disabled={isPending} />
             </form>
         </FormProvider>
     );

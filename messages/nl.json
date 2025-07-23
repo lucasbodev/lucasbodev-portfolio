@@ -2,6 +2,62 @@
   "Home": {
     "mainTitle": "Hallo, <orange> Ik ben Lucas -</orange><br></br>Volledige stapelontwikkelaar",
     "hireMe": "Beschikbaar voor het inhuren",
-    "location": "Bastogne, België"
+    "location": "Bastogne, België",
+    "mainSubtitle": "Gepassioneerd, nieuwsgierig en klaar om elke technische uitdaging aan te gaan. Ik bouw vloeiende, robuuste en elegante webervaringen. En dit is nog maar het begin.",
+    "formationTitle": "My <orange>diploma</orange>",
+    "formationSubtitle": "Application Development Bachelor",
+    "collabTitle": "My <orange>samenwerkingen</orange>",
+    "projectsTitle": "Mijn <orange>-projecten uitgevoerd</orange>",
+    "projectsSubtitle": "Hier zijn de projecten die me in staat stelden om vooruitgang te boeken, te experimenteren en concrete oplossingen te leveren.\nElke lijn van code vertelt een verhaal van strengheid, nieuwsgierigheid en passie.",
+    "testimonialsTitle": "Sommige <orange>getuigenissen</orange>",
+    "toolkitTitle": "My <orange>tools</orange> ontwikkeling",
+    "toolkitSubtitle": "Ik vind het leuk om de tools te testen, te vergelijken, te gebruiken die mijn projecten effectiever, schoner, schaalbaarder maken.\nHier zijn de techno's die me vandaag laten trillen ... en degenen die ik blijf verkennen.",
+    "testimonialsSubtitle": "Een paar woorden van degenen die me vertrouwden."
+  },
+  "ContactSection": {
+    "contactSectionTitle": "Laten we <orange> contact opnemen!</orange>",
+    "contactSectionSubtitle": "Ik kan niet wachten om met je samen te werken. En om iets groots te coderen.",
+    "contactLinkLabel": "Contact"
+  },
+  "Nav": {
+    "job": "Volledige stapelontwikkelaar"
+  },
+  "Menu": {
+    "home": "Home",
+    "projects": "Projecten",
+    "contact": "Contact"
+  },
+  "Projects": {
+    "projectsPageTitle": "Bekijk de <orange>-projecten</orange> <br></br>Ik realiseerde me met <orange>passie</orange>",
+    "projectsPageSubtitle": "Elk project heeft me iets geleerd. Ik heb lang geduurd, code en een beetje van mij."
+  },
+  "Contact": {
+    "connect": "Laten we <orange>verbinding maken!</orange>",
+    "connectSubtitle": "Ik ben altijd klaar om mijn netwerk uit te breiden of nieuwe uitdagingen aan te gaan.",
+    "getInTouchTitle": "Stap in <orange>aanraking:</orange>",
+    "getInTouchSubtitle": "Een project, een missie of een idee? Ik ben klaar om te coderen."
+  },
+  "ContactForm": {
+    "contactError": "Bij het verzenden van het bericht werd een probleem aangetroffen. Probeer het later opnieuw.",
+    "contactSuccess": "Bedankt voor je bericht! U ontvangt mijn antwoord zo snel mogelijk.",
+    "nameField": "Uw naam",
+    "emailField": "Uw e-mail",
+    "messageField": "Laat me een bericht achter ...",
+    "sendButton": "Stuur bericht"
+  },
+  "Project": {
+    "problem": "Probleem op te lossen:",
+    "solution": "Oplossing voorgeleverd:",
+    "challenges": "Uitdagingen:",
+    "benefits": "Belangrijkste bijdragen:",
+    "technologies": "Gebruikte technologieën:"
+  },
+  "PinProjectDetails": {
+    "back": "Terug naar projecten",
+    "projectLink": "Link naar het project:",
+    "client": "Klant:",
+    "industry": "Industrie:",
+    "services": "Diensten:",
+    "year": "Jaar:"
   }
 }

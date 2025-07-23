@@ -1,7 +1,6 @@
 import React from 'react';
 import bentoStyles from '@/styles/ui/bento.module.css';
 import styles from '@/app/[locale]/home.module.css';
-// import { getTranslations } from 'next-intl/server';
 import Bulleted from '@/components/bulleted/bulleted.component';
 import { IconSizes } from '@/components/icon/icon.component';
 import Heading, { HeadingTypes } from '@/components/heading/heading.component';
@@ -21,6 +20,7 @@ interface Collaboration {
 }
 
 interface ProjectCard {
+  id?: string;
   img: string,
   name: string,
   description: string
@@ -47,7 +47,7 @@ const Home = () => {
           <Heading type={HeadingTypes.H1} style={{ lineHeight: '125%' }}>
             {richTranslation('mainTitle')}
           </Heading>
-          <p>As a creative developer, I blend code and design to build unique, user-centric experiences. Let's turn your ideas into a dynamic and engaging digital reality!</p>
+          <p>{t('mainSubtitle')}</p>
         </div>
         <Bulleted startIcon='/icons/location.svg' iconSize={IconSizes.LARGER}>
           <span className={styles.disponibility}>{t('location')}</span>
@@ -62,9 +62,9 @@ const Home = () => {
         >
           <div className={`${styles.cellHead}`}>
             <Heading type={HeadingTypes.H4} startIcon='/icons/degree.svg'>
-              Ma <span className={styles.orange}>Formation</span>
+              {richTranslation('formationTitle')}
             </Heading>
-            <p>Bachelier en développement d’applications</p>
+            <p>{t('formationSubtitle')}</p>
           </div>
           <Image
             width={500}
@@ -77,7 +77,7 @@ const Home = () => {
         <RevealMotion variants={getRevealVariants(From.RIGHT, 0.15)} className={`${bentoStyles.bentoCell} ${styles.collaborations}`}>
           <div className={styles.collabsHead}>
             <Heading type={HeadingTypes.H4} startIcon='/icons/collab.svg'>
-              Mes <span className={styles.orange}>Collaborations</span>
+              {richTranslation('collabTitle')}
             </Heading>
           </div>
           <Marquee gap={32} direction={MarqueeDirection.LEFT}>
@@ -102,9 +102,9 @@ const Home = () => {
       <RevealMotion variants={getRevealVariants(From.LEFT, 0.2)} className={`${bentoStyles.bentoCell} ${styles.projectsHeading}`}>
         <div className={`${styles.cellHead} ${styles.projectsTitle}`}>
           <Heading type={HeadingTypes.H2} startIcon='/icons/project.svg'>
-            The projects <span className={styles.orange}>I realized</span>
+            {richTranslation('projectsTitle')}
           </Heading>
-          <p>As a creative developer, I blend code and design to build unique, user-centric experiences. Let's turn your ideas into a dynamic and engaging digital reality!</p>
+          <p>{t('projectsSubtitle')}</p>
         </div>
         <Image
           width={1080}
@@ -118,12 +118,12 @@ const Home = () => {
       <div className={`${styles.projectsList}`}>
         {
           ([
-            { img: '/images/hec-thumbnail.png', name: 'My Skills Logbook', description: 'Internship, development' },
-            { img: '/images/memory-wall-thumbnail.png', name: 'Memory Wall', description: 'Ui design, development' },
-            { img: '/images/h2a-thumbnail.png', name: 'H2A', description: 'Development' },
+            { id: 'my-skills-logbook', img: '/images/hec-thumbnail.png', name: 'My Skills Logbook', description: 'Internship, development' },
+            { id: 'memory-wall', img: '/images/memory-wall-thumbnail.png', name: 'Memory Wall', description: 'Ui design, development' },
+            { id: 'h2a', img: '/images/h2a-thumbnail.png', name: 'H2A', description: 'Development' },
           ] as ProjectCard[]).map((project, index) => (
             <RevealMotion key={index} variants={getRevealVariants(From.RIGHT, (index === 0 ? 0.4 : 0) + index / 10)} className={styles.cardLayout}>
-              <ProjectCard img={project.img} name={project.name} description={project.description} />
+              <ProjectCard id={project.id} img={project.img} name={project.name} description={project.description} />
             </RevealMotion>
           ))
         }
@@ -147,25 +147,25 @@ const Home = () => {
       <RevealMotion variants={getRevealVariants(From.BOTTOM)} className={`${bentoStyles.bentoCell} ${bentoStyles.halfWidth} ${styles.techSection}`}>
         <div className={`${styles.cellHead}`}>
           <Heading type={HeadingTypes.H2} startIcon='/icons/toolkit.svg'>
-            My development <span className={styles.orange}>Toolkit</span>
+            {richTranslation('toolkitTitle')}
           </Heading>
-          <p>Explore the powerful tools and technologies I use to bring ideas to life.</p>
+          <p>{t('toolkitSubtitle')}</p>
         </div>
         <div className={`${styles.technologies}`}>
-          <TechLink logo='/images/next.svg' name='Next.js' />
-          <TechLink logo='/images/prisma.svg' name='Prisma' />
-          <TechLink className={`${styles.third} ${styles.full}`} logo='/images/github.svg' name='GitHub' />
-          <TechLink className={styles.third} logo='/images/figma.svg' name='Figma' />
-          <TechLink className={styles.third} logo='/images/notion.svg' name='Notion' />
+          <TechLink logo='/images/next.svg' name='Next.js' url='https://nextjs.org/' />
+          <TechLink logo='/images/prisma.svg' name='Prisma' url='https://www.prisma.io/'/>
+          <TechLink className={`${styles.third} ${styles.full}`} logo='/images/github.svg' name='GitHub' url='https://github.com/'/>
+          <TechLink className={styles.third} logo='/images/figma.svg' name='Figma' url='https://www.figma.com/'/>
+          <TechLink className={styles.third} logo='/images/notion.svg' name='Notion' url='https://www.notion.com/'/>
         </div>
       </RevealMotion>
 
       <RevealMotion variants={getRevealVariants(From.BOTTOM, 0.2)} className={`${bentoStyles.bentoCell} ${bentoStyles.halfWidth} ${styles.testimonialsSection}`}>
         <div className={`${styles.cellHead} ${styles.testimonialsHead}`}>
           <Heading type={HeadingTypes.H2} startIcon='/icons/stars.svg'>
-            Some <span className={styles.orange}>Testimonials</span>
+            {richTranslation('testimonialsTitle')}
           </Heading>
-          <p>Don’t just take our word for it—see what others are saying about how this template transformed their online presence.</p>
+          <p>{t('testimonialsSubtitle')}</p>
         </div>
         <Marquee gap={32} direction={MarqueeDirection.LEFT} stopsOnHover={true}>
           <Testimonial

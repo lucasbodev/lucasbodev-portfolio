@@ -2,9 +2,11 @@ import React from "react";
 import styles from "@/components/menu/menu.module.css";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
-
+import { useTranslations } from "next-intl";
 
 const Menu = () => {
+
+    const t = useTranslations('Menu');
 
     return (
         <div className={styles.menu}>
@@ -16,7 +18,7 @@ const Menu = () => {
                     alt='School image'
                     className={styles.menuIcon}
                 />
-                <span className={styles.menuLabel}>Home</span>
+                <span className={styles.menuLabel}>{t('home')}</span>
             </Link>
             <Link href={'/projects'} className={styles.menuLink}>
                 <Image
@@ -26,7 +28,7 @@ const Menu = () => {
                     alt='School image'
                     className={styles.menuIcon}
                 />
-                <span className={styles.menuLabel}>Projects</span>
+                <span className={styles.menuLabel}>{t('projects')}</span>
             </Link>
             <Link href={'/contact'} className={styles.menuLink}>
                 <Image
@@ -36,7 +38,7 @@ const Menu = () => {
                     alt='School image'
                     className={styles.menuIcon}
                 />
-                <span className={styles.menuLabel}>Contact</span>
+                <span className={styles.menuLabel}>{t('contact')}</span>
             </Link >
         </div>
     );

@@ -2,6 +2,62 @@
   "Home": {
     "mainTitle": "Hallo, <orange> Ich bin Lucas -</orange><br></br>Full Stack Developer",
     "hireMe": "Zur Einstellung erhältlich",
-    "location": "Bastogne, Belgien"
+    "location": "Bastogne, Belgien",
+    "mainSubtitle": "Leidenschaftlich, neugierig und bereit, jede technische Herausforderung zu stellen. Ich baue flüssige, robuste und elegante Web -Erlebnisse. Und das ist nur der Anfang.",
+    "formationTitle": "Mein <orange>diploma</orange>",
+    "formationSubtitle": "Bachelor für Anwendungsentwicklung",
+    "collabTitle": "Meine <orange>kollaborationen</orange>",
+    "projectsTitle": "Meine <orange> -Projekte wurden </orange> ausgeführt",
+    "projectsSubtitle": "Hier sind die Projekte, die es mir ermöglichten, konkrete Lösungen voranzutreiben, zu experimentieren und zu liefern.\nJede Codezeile erzählt eine Geschichte von Strenge, Neugier und Leidenschaft.",
+    "testimonialsTitle": "Einige <orange>Testimonials</orange>",
+    "toolkitTitle": "Meine <orange>-Wolfträle</orange> Entwicklung",
+    "toolkitSubtitle": "Ich mag es, die Tools zu testen, zu vergleichen, die Tools zu übernehmen, die meine Projekte effektiver, sauberer und skalierbarer machen.\nHier sind die Technos, die mich heute vibrieren lassen ... und die, die ich weiter erforsche.",
+    "testimonialsSubtitle": "Ein paar Worte von denen, die mir vertrauten."
+  },
+  "ContactSection": {
+    "contactSectionTitle": "Lassen Sie uns <orange>in Verbindung setzen!</orange>",
+    "contactSectionSubtitle": "Ich kann es kaum erwarten, mit Ihnen zusammenzuarbeiten. Und etwas Großes zu codieren.",
+    "contactLinkLabel": "Kontakt"
+  },
+  "Nav": {
+    "job": "Voller Stapelentwickler"
+  },
+  "Menu": {
+    "home": "Home",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "Projects": {
+    "projectsPageTitle": "Schauen Sie sich die<orange> -Projekte an</orange><br></br>Ich habe mit <orange>passion</orange> erkannt",
+    "projectsPageSubtitle": "Jedes Projekt hat mir etwas beigebracht. Ich brauchte lange, Code und ein wenig von mir."
+  },
+  "Contact": {
+    "connect": "Lassen Sie uns <orange>Connect!</orange>",
+    "connectSubtitle": "Ich bin immer bereit, mein Netzwerk zu erweitern oder neue Herausforderungen zu stellen.",
+    "getInTouchTitle": "Holen Sie sich in <orange>Touch:</orange>",
+    "getInTouchSubtitle": "Ein Projekt, eine Mission oder eine Idee? Ich bin bereit zu codieren."
+  },
+  "ContactForm": {
+    "contactError": "Ein Problem wurde beim Senden der Nachricht aufgetreten. Bitte versuchen Sie es später erneut.",
+    "contactSuccess": "Vielen Dank für Ihre Nachricht! Sie erhalten meine Antwort so schnell wie möglich.",
+    "nameField": "Ihr Name",
+    "emailField": "Ihre E-Mail",
+    "messageField": "Hinterlasse mir eine Nachricht ...",
+    "sendButton": "Nachricht senden"
+  },
+  "Project": {
+    "problem": "Problem zu beheben:",
+    "solution": "Lösung zur Verfügung gestellt:",
+    "challenges": "Herausforderungen:",
+    "benefits": "Schlüsselbeiträge:",
+    "technologies": "Verwendete Technologien:"
+  },
+  "PinProjectDetails": {
+    "back": "Zurück zu Projekten",
+    "projectLink": "Link zum Projekt:",
+    "client": "Kunde:",
+    "industry": "Industrie:",
+    "services": "Dienstleistungen:",
+    "year": "Jahr:"
   }
 }

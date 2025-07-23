@@ -2,7 +2,73 @@
   "Home": {
     "mainTitle": "Hello, <orange>I’m Lucas -</orange><br></br>Full Stack Developer",
     "hireMe": "Available for hiring",
-    "location": "Bastogne, Belgium"
+    "location": "Bastogne, Belgium",
+    "mainSubtitle": "Passionate, curious and ready to take up each technical challenge. \nI build fluid, robust and elegant web experiences. \nAnd this is only the beginning.",
+    "formationTitle": "My <orange>Diploma</orange>",
+    "formationSubtitle": "Application development bachelor",
+    "collabTitle": "My <orange>Collaborations</orange>",
+    "projectsTitle": "My <orange>projects carried out</orange>",
+    "projectsSubtitle": "Here are the projects that allowed me to progress, experiment and deliver concrete solutions.\n\nEach line of code tells a story of rigor, curiosity and passion.",
+    "testimonialsTitle": "Some <orange>Testimonials</orange>",
+    "toolkitTitle": "My development <orange> toolkit</orange>",
+    "toolkitSubtitle": "I like to test, compare, adopt the tools that make my projects more effective, cleaner, more scalable.\n\nHere are the technos that make me vibrate today ... and the ones I continue to explore.",
+    "testimonialsSubtitle": "A few words from those who trusted me."
   },
-  "hireMe": "Available for hire"
+  "hireMe": "Available for hire",
+  "ContactSection": {
+    "contactSectionTitle": "Let's <orange>Get in Touch!</orange>",
+    "contactSectionSubtitle": "I can't wait to collaborate with you. \nAnd to code something big.",
+    "contactLinkLabel": "Contact"
+  },
+  "Nav": {
+    "job": "Full Stack developer"
+  },
+  "Menu": {
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "projectsPageTitle": "Take a look at the <span className={styles.orange}>Projects</span><br /> I realized with <span className={styles.orange}>Passion</span>",
+  "Projects": {
+    "projectsPageTitle": "Take a look at the <orange>Projects</orange><br></br>I realized with <orange>Passion</orange>",
+    "projectsPageSubtitle": "Each project taught me something. \nI took a long time, code and a little of me."
+  },
+  "projectsPageSubtitle": "Chaque projet m’a appris quelque chose. J’y ai mis du temps, du code et un peu de moi.",
+  "Contact": {
+    "connect": "Let's <orange>Connect!</orange>",
+    "connectSubtitle": "I am always ready to expand my network or take up new challenges.",
+    "getInTouchTitle": "Get in <orange>Touch:</orange>",
+    "getInTouchSubtitle": "A project, a mission or an idea? \nI am ready to code."
+  },
+  "connectSubtitle": "Je suis toujours partant pour élargir mon réseau ou relever de nouveaux défis.",
+  "getInTouchTitle": "Get in <span className={styles.orange}>Touch:</span>",
+  "getInTouchSubtitle": "Envoyez-moi un message, je réponds toujours avec plaisir.",
+  "ContactForm": {
+    "contactError": "A problem was encountered when sending the message. \nPlease try again later.",
+    "contactSuccess": "Thank you for your message! \nYou will receive my answer as soon as possible.",
+    "nameField": "Your name",
+    "emailField": "Your email",
+    "messageField": "Leave me a message...",
+    "sendButton": "Send message"
+  },
+  "emailField": "Your email",
+  "messageField": "Leave me a message...",
+  "sendButton": "Send message",
+  "problem": "Problème à résoudre:",
+  "Project": {
+    "problem": "Problem to be resolved:",
+    "solution": "Solution provided:",
+    "challenges": "Challenges:",
+    "benefits": "Key contributions:",
+    "technologies": "Technologies used:"
+  },
+  "PinProjectDetails": {
+    "back": "Back to projects",
+    "projectLink": "Link to the project:",
+    "client": "Customer:",
+    "industry": "Industry:",
+    "services": "Services:",
+    "year": "Year:"
+  },
+  "projectLink": "Lien vers le projet:"
 }

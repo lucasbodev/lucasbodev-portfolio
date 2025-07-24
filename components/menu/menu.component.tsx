@@ -40,7 +40,7 @@ const Menu = () => {
                 />
                 <span className={styles.menuLabel}>{t('contact')}</span>
             </Link >
-            <a href={'/docs/Lucas Bodet - CV.pdf'} className={styles.menuLink} target="_blank" rel="noopener noreferrer">
+            <a href={'/docs/Lucas BODET - CV.pdf'} className={styles.menuLink} target="_blank" rel="noopener noreferrer">
                 <Image
                     width={500}
                     height={500}

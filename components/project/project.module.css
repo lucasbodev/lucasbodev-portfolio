@@ -41,7 +41,7 @@
     gap: var(--space-3);
     border-radius: var(--border-radius);
     border-color: var(--primary-color-750);
-    background-color: var(--secondary-color-500);
+    background-color: var(--secondary-color-900);
 }
 
 .techBox {

@@ -40,6 +40,16 @@ const Menu = () => {
                 />
                 <span className={styles.menuLabel}>{t('contact')}</span>
             </Link >
+            <a href={'/docs/Lucas Bodet - CV.pdf'} className={styles.menuLink} target="_blank" rel="noopener noreferrer">
+                <Image
+                    width={500}
+                    height={500}
+                    src={'/icons/cv.svg'}
+                    alt='School image'
+                    className={styles.menuIcon}
+                />
+                <span className={styles.menuLabel}>C.V.</span>
+            </a >
         </div>
     );
 }

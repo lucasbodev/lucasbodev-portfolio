@@ -14,7 +14,7 @@ const TechLink = ({ logo, name, url, ...props }: TechLinkProps) => {
   const { style, className } = props;
 
   return (
-    <a href={url as any} className={`${styles.techLink} ${className}`} style={style}>
+    <a href={url as any} className={`${styles.techLink} ${className}`} style={style} target="_blank" rel="noopener noreferrer">
       <div className={styles.techLogoContainer}>
         <Image className={styles.techLogo} width={64} height={64} src={logo} alt="Tech logo" />
       </div>

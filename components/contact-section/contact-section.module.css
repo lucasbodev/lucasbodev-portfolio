@@ -32,15 +32,15 @@
 
   &:hover {
     .contactLabel {
-      color: var(--primary-color);
+      color: var(--secondary-color);
     }
 
     .arrowBtn {
-      background-color: var(--primary-color-900);
-      border: 1px solid var(--primary-color-750);
+      background-color: var(--secondary-color-900);
+      border: 1px solid var(--secondary-color-750);
 
       .contactLinkIcon {
-        color: var(--primary-color);
+        color: var(--secondary-color);
         transform: rotate(45deg);
       }
     }
@@ -87,7 +87,10 @@
 }
 
 .orange {
-  color: var(--primary-color);
+  color: var(--secondary-color);
+  /* background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 @media (max-width: 1024px) {

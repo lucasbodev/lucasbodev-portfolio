@@ -18,7 +18,10 @@
 }
 
 .orange {
-  color: var(--primary-color);
+  color: var(--secondary-color);
+  /* background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 .heroSide {

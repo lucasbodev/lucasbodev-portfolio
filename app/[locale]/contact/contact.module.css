@@ -25,12 +25,15 @@
 }
 
 .orange {
-    color: var(--primary-color);
+    color: var(--secondary-color);
+    /* background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }
 
 .contactImg {
     grid-column: span 5;
-    padding: 0!important;
+    padding: 0 !important;
     flex-flow: column-reverse;
 }
 

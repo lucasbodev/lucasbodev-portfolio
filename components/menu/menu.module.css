@@ -5,7 +5,7 @@
     transform: translateX(-50%);
     margin-bottom: var(--space-3);
     border-radius: var(--border-radius);
-    background-color: var(--secondary-color-500);
+    background-color: var(--secondary-color-800);
     display: flex;
     gap: var(--space-3);
     padding: var(--space-3);

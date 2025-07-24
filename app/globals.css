@@ -5,16 +5,38 @@
 
 :root {
   /* Couleurs */
-  --primary-color: #F48734;
-  --primary-color-500: #EEC4A5;
+  /* --primary-color: #F48734; */
+  /* --primary-color-500: #EEC4A5;
   --primary-color-750: #F8E8DC;
   --primary-color-800: #fcf5f0;
-  --primary-color-900: #FEFAF7;
-  --secondary-gradient: linear-gradient(354deg, rgba(168, 207, 237, 1) 0%, rgba(235, 243, 249, 1) 100%);
+  --primary-color-900: #FEFAF7; */
+  /* --secondary-gradient: linear-gradient(354deg, rgba(168, 207, 237, 1) 0%, rgba(235, 243, 249, 1) 100%);
   --secondary-color: #A8CFED;
   --secondary-color-250: #e4eef7;
   --secondary-color-500: #EBF3F9;
-  --secondary-color-900: #F5F8FB;
+  --secondary-color-900: #F5F8FB; */
+  /* --primary-gradient: -webkit-linear-gradient(#A478E8, #516CF7);
+  --primary-color: #516CF7;
+  --primary-color-500: #b8c2f6;
+  --primary-color-750: #dee3f7;
+  --primary-color-800: #ebedf6;
+  --primary-color-900: #f6f7fd;
+  --secondary-gradient: linear-gradient(354deg, rgba(168, 207, 237, 1) 0%, rgba(235, 243, 249, 1) 100%);
+  --secondary-color: #A478E8;
+  --secondary-color-250: #ccb4ef;
+  --secondary-color-500: #f3ebff;
+  --secondary-color-900: #f1eef6; */
+  --primary-gradient: -webkit-linear-gradient(120deg, #A478E8, #516CF7);
+  --secondary-color: #516CF7;
+  --secondary-color-500: #b8c2f6;
+  --secondary-color-750: #dee3f7;
+  --secondary-color-800: #ebedf6;
+  --secondary-color-900: #f6f7fd;
+  --secondary-gradient: -webkit-linear-gradient(120deg, #c6cffe 0%, #f6f7fd 100%);
+  --primary-color: #A478E8;
+  --primary-color-250: #ccb4ef;
+  --primary-color-500: #f6f0ff;
+  --primary-color-900: #f6f2ff;
   --white: hsl(0, 0%, 100%);
   --black: #2B2C2E;
   --black-500: #4A4A4A;
@@ -93,14 +115,14 @@ body {
   overflow-x: hidden;
   font-family: var(--font-funnel-display);
   color: var(--black);
-  background-color: var(--secondary-color-500);
+  background-color: var(--secondary-color-900);
   line-height: 1;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 ul {

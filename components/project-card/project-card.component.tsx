@@ -43,7 +43,9 @@ const ProjectCard = ({ id, img, name, description, vertical = false }: ProjectCa
 
             <button className={styles.mobileBtn}>
                 <span>View details</span>
-                <Icon src="/icons/arrow-top-right-orange.svg" size={IconSizes.SMALLER} />
+                <svg className={styles.projectLinkIconMobile} width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30.1698 15.085L15.0848 30.1699M30.1698 15.085L30.1698 26.3987M30.1698 15.085L18.8561 15.085" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
             </button>
         </Link>
     );

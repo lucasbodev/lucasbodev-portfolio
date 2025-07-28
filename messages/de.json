@@ -12,7 +12,10 @@
     "testimonialsTitle": "Einige <orange>Testimonials</orange>",
     "toolkitTitle": "Meine <orange>-Wolfträle</orange> Entwicklung",
     "toolkitSubtitle": "Ich mag es, die Tools zu testen, zu vergleichen, die Tools zu übernehmen, die meine Projekte effektiver, sauberer und skalierbarer machen.\nHier sind die Technos, die mich heute vibrieren lassen ... und die, die ich weiter erforsche.",
-    "testimonialsSubtitle": "Ein paar Worte von denen, die mir vertrauten."
+    "testimonialsSubtitle": "Ein paar Worte von denen, die mir vertrauten.",
+    "hecServices": "Praktikum, Entwicklung",
+    "mwServices": "UI -Design, Entwicklung",
+    "h2aServices": "Entwicklung"
   },
   "ContactSection": {
     "contactSectionTitle": "Lassen Sie uns <orange>in Verbindung setzen!</orange>",
@@ -29,7 +32,10 @@
   },
   "Projects": {
     "projectsPageTitle": "Schauen Sie sich die<orange> -Projekte an</orange><br></br>Ich habe mit <orange>passion</orange> erkannt",
-    "projectsPageSubtitle": "Jedes Projekt hat mir etwas beigebracht. Ich brauchte lange, Code und ein wenig von mir."
+    "projectsPageSubtitle": "Jedes Projekt hat mir etwas beigebracht. Ich brauchte lange, Code und ein wenig von mir.",
+    "hecServices": "Praktikum, Entwicklung",
+    "mwServices": "UI -Design, Entwicklung",
+    "h2aServices": "Entwicklung"
   },
   "Contact": {
     "connect": "Lassen Sie uns <orange>Connect!</orange>",
@@ -110,5 +116,8 @@
     "nextBenefit6": "Weitere komfortable Bestätigung von Formularen dank Zod, die mit Kompliment verknüpft ist",
     "nextBenefit7": "Fluidunterhaltung dank Framer Motion und/oder GSAP",
     "nextBenefit8": "Einfache und sichere Bereitstellung verfügbare statistische Tools dank des Vercel -Ökosystems"
+  },
+  "ProjectCard": {
+    "viewDetails": "Details anzeigen"
   }
 }

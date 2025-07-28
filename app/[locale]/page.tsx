@@ -118,9 +118,9 @@ const Home = () => {
       <div className={`${styles.projectsList}`}>
         {
           ([
-            { id: 'my-skills-logbook', img: '/images/hec-thumbnail.png', name: 'My Skills Logbook', description: 'Internship, development' },
-            { id: 'memory-wall', img: '/images/memory-wall-thumbnail.png', name: 'Memory Wall', description: 'Ui design, development' },
-            { id: 'h2a', img: '/images/h2a-thumbnail.png', name: 'H2A', description: 'Development' },
+            { id: 'my-skills-logbook', img: '/images/hec-thumbnail.png', name: 'My Skills Logbook', description: t('hecServices') },
+            { id: 'memory-wall', img: '/images/memory-wall-thumbnail.png', name: 'Memory Wall', description: t('mwServices') },
+            { id: 'h2a', img: '/images/h2a-thumbnail.png', name: 'H2A', description: t('h2aServices') },
           ] as ProjectCard[]).map((project, index) => (
             <RevealMotion key={index} variants={getRevealVariants(From.RIGHT, (index === 0 ? 0.4 : 0) + index / 10)} className={styles.cardLayout}>
               <ProjectCard id={project.id} img={project.img} name={project.name} description={project.description} />
@@ -144,6 +144,21 @@ const Home = () => {
         </Marquee>
       </RevealMotion>
 
+      {/* <RevealMotion variants={getRevealVariants(From.BOTTOM)} className={`${bentoStyles.bentoCell} ${bentoStyles.fullWidth} ${styles.techSection}`}>
+        <div className={`${styles.cellHead}`}>
+          <Heading type={HeadingTypes.H2} startIcon='/icons/toolkit.svg'>
+            {richTranslation('toolkitTitle')}
+          </Heading>
+          <p>{t('toolkitSubtitle')}</p>
+        </div>
+        <div className={`${styles.technologies}`}>
+          <TechLink logo='/images/next.svg' name='Next.js' url='https://nextjs.org/' />
+          <TechLink logo='/images/prisma.svg' name='Prisma' url='https://www.prisma.io/'/>
+          <TechLink className={`${styles.third} ${styles.full}`} logo='/images/github.svg' name='GitHub' url='https://github.com/'/>
+          <TechLink className={styles.third} logo='/images/figma.svg' name='Figma' url='https://www.figma.com/'/>
+          <TechLink className={styles.third} logo='/images/notion.svg' name='Notion' url='https://www.notion.com/'/>
+        </div>
+      </RevealMotion> */}
       <RevealMotion variants={getRevealVariants(From.BOTTOM)} className={`${bentoStyles.bentoCell} ${bentoStyles.halfWidth} ${styles.techSection}`}>
         <div className={`${styles.cellHead}`}>
           <Heading type={HeadingTypes.H2} startIcon='/icons/toolkit.svg'>

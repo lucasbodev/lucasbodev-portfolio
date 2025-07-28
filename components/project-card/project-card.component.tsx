@@ -5,6 +5,7 @@ import styles from "@/components/project-card/project-card.module.css";
 import Heading, { HeadingTypes } from "../heading/heading.component";
 import { Link } from "@/i18n/routing";
 import Icon, { IconSizes } from "../icon/icon.component";
+import { useTranslations } from "next-intl";
 
 interface ProjectCardProps {
     id?: string;
@@ -15,6 +16,8 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ id, img, name, description, vertical = false }: ProjectCardProps) => {
+
+    const t = useTranslations('ProjectCard');
 
     return (
         <Link href={`/project-details/${id}` as any} className={`${bentoStyles.bentoCell} ${styles.projectCardContainer}`}>
@@ -42,7 +45,7 @@ const ProjectCard = ({ id, img, name, description, vertical = false }: ProjectCa
             </div>
 
             <button className={styles.mobileBtn}>
-                <span>View details</span>
+                <span>{t('viewDetails')}</span>
                 <svg className={styles.projectLinkIconMobile} width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M30.1698 15.085L15.0848 30.1699M30.1698 15.085L30.1698 26.3987M30.1698 15.085L18.8561 15.085" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>

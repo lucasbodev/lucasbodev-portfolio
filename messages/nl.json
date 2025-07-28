@@ -12,7 +12,10 @@
     "testimonialsTitle": "Sommige <orange>getuigenissen</orange>",
     "toolkitTitle": "My <orange>tools</orange> ontwikkeling",
     "toolkitSubtitle": "Ik vind het leuk om de tools te testen, te vergelijken, te gebruiken die mijn projecten effectiever, schoner, schaalbaarder maken.\nHier zijn de techno's die me vandaag laten trillen ... en degenen die ik blijf verkennen.",
-    "testimonialsSubtitle": "Een paar woorden van degenen die me vertrouwden."
+    "testimonialsSubtitle": "Een paar woorden van degenen die me vertrouwden.",
+    "hecServices": "Stage, ontwikkeling",
+    "mwServices": "UI -ontwerp, ontwikkeling",
+    "h2aServices": "Ontwikkeling"
   },
   "ContactSection": {
     "contactSectionTitle": "Laten we <orange> contact opnemen!</orange>",
@@ -29,7 +32,10 @@
   },
   "Projects": {
     "projectsPageTitle": "Bekijk de <orange>-projecten</orange> <br></br>Ik realiseerde me met <orange>passie</orange>",
-    "projectsPageSubtitle": "Elk project heeft me iets geleerd. Ik heb lang geduurd, code en een beetje van mij."
+    "projectsPageSubtitle": "Elk project heeft me iets geleerd. Ik heb lang geduurd, code en een beetje van mij.",
+    "hecServices": "Stage, ontwikkeling",
+    "mwServices": "UI -ontwerp, ontwikkeling",
+    "h2aServices": "Ontwikkeling"
   },
   "Contact": {
     "connect": "Laten we <orange>verbinding maken!</orange>",
@@ -110,5 +116,8 @@
     "nextBenefit6": "Comfortabelere validatie van formulieren dankzij ZOD gekoppeld aan compliment",
     "nextBenefit7": "Vloeistoftertainment dankzij Framer Motion en/of GSAP",
     "nextBenefit8": "Gemakkelijke en veilige implementatie beschikbare statistische tools dankzij het Vercel -ecosysteem"
+  },
+  "ProjectCard": {
+    "viewDetails": "Bekijk details"
   }
 }

@@ -12,7 +12,10 @@
     "testimonialsTitle": "E puer <orange>Testimonials</orange>",
     "toolkitTitle": "Meng <orange>Tools</orange> Entwécklung",
     "toolkitSubtitle": "Dat gären Test, vergläichen, adcaptéieren d'Titen déi meng Projete maachen, déi vill effektiv, méi schneiden.\nHei sinn d'Technik déi haut vibréieren déi haut vibréieren ... An déi ech weider entdecken.",
-    "testimonialsSubtitle": "E puer Wierder aus deenen, déi mech vertraut hunn."
+    "testimonialsSubtitle": "E puer Wierder aus deenen, déi mech vertraut hunn.",
+    "hecServices": "Stage, Entwécklung",
+    "mwServices": "Ui Design, Entwécklung",
+    "h2aServices": "Entwécklung"
   },
   "ContactSection": {
     "contactSectionTitle": "Loosst eis <orange>a Kontakt kommen!</orange>",
@@ -29,7 +32,10 @@
   },
   "Projects": {
     "projectsPageTitle": "Kuckt Iech op déi <orange>Projekter</orange><br></br>Ech hu realiséiert mat <orange>Leidenschaft</orange>",
-    "projectsPageSubtitle": "All Projet huet mech eppes geléiert. Ech hunn eng laang Zäit gedauert, Code an e bësse vu mir."
+    "projectsPageSubtitle": "All Projet huet mech eppes geléiert. Ech hunn eng laang Zäit gedauert, Code an e bësse vu mir.",
+    "hecServices": "Stage, Entwécklung",
+    "mwServices": "Ui Design, Entwécklung",
+    "h2aServices": "Entwécklung"
   },
   "Contact": {
     "connect": "Loosst eis <orange>verbannen!</orange>",
@@ -110,5 +116,8 @@
     "nextBenefit6": "Méi komfortabel Validatioun vu Formen Merci un den Zod fir ze komplimentéieren",
     "nextBenefit7": "Flësseg Ënnerhalung Merci un de Fuerm Bewegung an / oder GSAP",
     "nextBenefit8": "Einfach an sécher Détachement verfügbar Statistesch Tools Merci un de Verksemotem"
+  },
+  "ProjectCard": {
+    "viewDetails": "View Detailer"
   }
 }

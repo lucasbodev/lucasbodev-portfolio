@@ -12,7 +12,10 @@
     "testimonialsTitle": "Some <orange>Testimonials</orange>",
     "toolkitTitle": "My development <orange> toolkit</orange>",
     "toolkitSubtitle": "I like to test, compare, adopt the tools that make my projects more effective, cleaner, more scalable.\n\nHere are the technos that make me vibrate today ... and the ones I continue to explore.",
-    "testimonialsSubtitle": "A few words from those who trusted me."
+    "testimonialsSubtitle": "A few words from those who trusted me.",
+    "hecServices": "Internship, development",
+    "mwServices": "Ui design, development",
+    "h2aServices": "Development"
   },
   "hireMe": "Available for hire",
   "ContactSection": {
@@ -31,7 +34,10 @@
   "projectsPageTitle": "Take a look at the <span className={styles.orange}>Projects</span><br /> I realized with <span className={styles.orange}>Passion</span>",
   "Projects": {
     "projectsPageTitle": "Take a look at the <orange>Projects</orange><br></br>I realized with <orange>Passion</orange>",
-    "projectsPageSubtitle": "Each project taught me something. \nI took a long time, code and a little of me."
+    "projectsPageSubtitle": "Each project taught me something. \nI took a long time, code and a little of me.",
+    "hecServices": "Internship, development",
+    "mwServices": "Ui design, development",
+    "h2aServices": "Development"
   },
   "projectsPageSubtitle": "Chaque projet m’a appris quelque chose. J’y ai mis du temps, du code et un peu de moi.",
   "Contact": {
@@ -121,5 +127,12 @@
     "nextBenefit6": "More comfortable validation of forms thanks to Zod linked to compliment",
     "nextBenefit7": "Fluid entertainment thanks to Framer Motion and/or GSAP",
     "nextBenefit8": "Easy and secure deployment available statistical tools thanks to the Vercel ecosystem"
-  }
+  },
+  "viewDetails": "View details",
+  "ProjectCard": {
+    "viewDetails": "View details"
+  },
+  "hecServices": "Internship, development",
+  "mwServices": "Ui design, development",
+  "h2aServices": "Development"
 }

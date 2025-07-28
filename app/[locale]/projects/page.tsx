@@ -56,10 +56,10 @@ const Projects = () => {
             <div className={styles.projectList}>
                 {
                     ([
-                        { id: 'my-skills-logbook', img: '/images/hec-thumbnail.png', name: 'My Skills Logbook', description: 'Internship, development' },
-                        { id: 'memory-wall', img: '/images/memory-wall-thumbnail.png', name: 'Memory Wall', description: 'Ui design, development' },
-                        { id: 'h2a', img: '/images/h2a-thumbnail.png', name: 'H2A', description: 'Development' },
-                        { id: 'next-starter', img: '/images/next-starter.png', name: 'Next Starter', description: 'Development' },
+                        { id: 'my-skills-logbook', img: '/images/hec-thumbnail.png', name: 'My Skills Logbook', description: t('hecServices') },
+                        { id: 'memory-wall', img: '/images/memory-wall-thumbnail.png', name: 'Memory Wall', description: t('mwServices') },
+                        { id: 'h2a', img: '/images/h2a-thumbnail.png', name: 'H2A', description: t('h2aServices') },
+                        { id: 'next-starter', img: '/images/next-starter.png', name: 'Next Starter', description: t('h2aServices') },
                     ] as ProjectCard[]).map((project, index) => (
                         <RevealMotion key={index} variants={getRevealVariants(From.BOTTOM, 0.4 + index / 10)}>
                             <ProjectCard id={project.id} img={project.img} name={project.name} description={project.description} vertical={true} />

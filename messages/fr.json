@@ -12,7 +12,10 @@
     "testimonialsTitle": "Quelques <orange>Témoignages</orange>",
     "toolkitTitle": "Mes <orange>outils</orange> de développement",
     "toolkitSubtitle": "J’aime tester, comparer, adopter les outils qui rendent mes projets plus efficaces, plus propres, plus scalables.\nVoici les technos qui me font vibrer aujourd’hui… et celles que je continue d’explorer.",
-    "testimonialsSubtitle": "Quelques mots de ceux qui m’ont fait confiance."
+    "testimonialsSubtitle": "Quelques mots de ceux qui m’ont fait confiance.",
+    "hecServices": "Stage, développement",
+    "mwServices": "Ui design, développement",
+    "h2aServices": "Développement"
   },
   "location": "Bastogne, Belgium",
   "mainSubtitle": "Passionné, curieux et prêt à relever chaque défi technique. Je construis des expériences web fluides, robustes et élégantes. Et ce n’est que le début.",
@@ -47,7 +50,10 @@
   "contact": "Contact",
   "Projects": {
     "projectsPageTitle": "Jetez un œil aux <orange>Projets</orange><br></br>que j'ai réalisés avec <orange>Passion </orange>",
-    "projectsPageSubtitle": "Chaque projet m’a appris quelque chose. J’y ai mis du temps, du code et un peu de moi."
+    "projectsPageSubtitle": "Chaque projet m’a appris quelque chose. J’y ai mis du temps, du code et un peu de moi.",
+    "hecServices": "Stage, développement",
+    "mwServices": "Ui design, développement",
+    "h2aServices": "Développement"
   },
   "connect": "Let's <span className={styles.orange}>Connect!</span>",
   "Contact": {
@@ -190,5 +196,8 @@
   "nextBenefit5": "Gestion d'états de l'application simple et efficace grâce à Zustand",
   "nextBenefit6": "Validation des formulaires plus confortable grâce à Zod lié à Conform",
   "nextBenefit7": "Animations fluides grâce à Framer Motion et/ou GSAP",
-  "nextBenefit8": "Déploiement aisé et sécurisé + outils de statistiques disponibles grâce à l'écosystème de Vercel"
+  "nextBenefit8": "Déploiement aisé et sécurisé + outils de statistiques disponibles grâce à l'écosystème de Vercel",
+  "ProjectCard": {
+    "viewDetails": "Voir détails"
+  }
 }

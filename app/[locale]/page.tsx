@@ -185,11 +185,19 @@ const Home = () => {
         <Marquee gap={32} direction={MarqueeDirection.LEFT} stopsOnHover={true}>
           <Testimonial
             note={4}
-            quote={'This portfolio template felt like it was designed specifically for me. It’s intuitive, visually stunning, and helped me communicate my ideas more effectively. Highly recommend it to anyone in design.'}
-            authorName='John Doe'
-            authorJob='IT Manager'
+            quote={t('rhMediasTestimonial')}
+            authorName='Romain L.'
+            authorJob='RH Medias'
+            picture='/images/romain.png'
           />
           <Testimonial
+            note={4}
+            quote={t('rhMediasTestimonial')}
+            authorName='Romain L.'
+            authorJob='RH Medias'
+            picture='/images/romain.png'
+          />
+          {/* <Testimonial
             note={4}
             quote={'This portfolio template felt like it was designed specifically for me. It’s intuitive, visually stunning, and helped me communicate my ideas more effectively. Highly recommend it to anyone in design.'}
             authorName='John Doe'
@@ -200,7 +208,7 @@ const Home = () => {
             quote={'This portfolio template felt like it was designed specifically for me. It’s intuitive, visually stunning, and helped me communicate my ideas more effectively. Highly recommend it to anyone in design.'}
             authorName='John Doe'
             authorJob='IT Manager'
-          />
+          /> */}
         </Marquee>
       </RevealMotion>
 

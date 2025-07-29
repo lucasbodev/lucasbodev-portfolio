@@ -15,7 +15,8 @@
     "testimonialsSubtitle": "Quelques mots de ceux qui m’ont fait confiance.",
     "hecServices": "Stage, développement",
     "mwServices": "Ui design, développement",
-    "h2aServices": "Développement"
+    "h2aServices": "Développement",
+    "rhMediasTestimonial": "Quel plaisir de travailler avec Lucas ! Proactif et déterminé, il sait mener un projet à bien et trouver les solutions aux problèmes des clients. Il est à l’écoute et toujours disponible. Avec un sens aiguisé du détail, il a l’œil partout et s’implique toujours à fond. Sans jamais faire de compromis entre l’utile et l’agréable (UI/UX). Je ne peux que recommander Lucas pour son travail et son professionnalisme !"
   },
   "location": "Bastogne, Belgium",
   "mainSubtitle": "Passionné, curieux et prêt à relever chaque défi technique. Je construis des expériences web fluides, robustes et élégantes. Et ce n’est que le début.",
@@ -199,5 +200,6 @@
   "nextBenefit8": "Déploiement aisé et sécurisé + outils de statistiques disponibles grâce à l'écosystème de Vercel",
   "ProjectCard": {
     "viewDetails": "Voir détails"
-  }
+  },
+  "rhMediasTestimonial": "Quel plaisir de travailler avec Lucas ! Proactif et déterminé, il sait mener un projet à bien et trouver les solutions aux problèmes des clients. Il est à l’écoute et toujours disponible. Avec un sens aiguisé du détail, il a l’œil partout et s’implique toujours à fond. Sans jamais faire de compromis entre l’utile et l’agréable (UI/UX). Je ne peux que recommander Lucas pour son travail et son professionnalisme !"
 }

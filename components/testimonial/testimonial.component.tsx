@@ -7,10 +7,11 @@ interface TestimonialProps {
     note: number,
     quote: string,
     authorName: string,
-    authorJob: string
+    authorJob: string,
+    picture: string
 }
 
-const Testimonial = ({ note, quote, authorName, authorJob }: TestimonialProps) => {
+const Testimonial = ({ note, quote, authorName, authorJob, picture }: TestimonialProps) => {
 
     return (
         <div className={styles.testimonialCard}>
@@ -20,7 +21,7 @@ const Testimonial = ({ note, quote, authorName, authorJob }: TestimonialProps) =
             </div>
             <p className={styles.quote}>{quote}</p>
             <div className={styles.author}>
-                <Avatar src='/images/author.png' />
+                <Avatar src={picture} />
                 <div className={styles.authorInfos}>
                     <label className={styles.authorName}>{authorName}</label>
                     <span className={styles.authorJob}>{authorJob}</span>

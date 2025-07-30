@@ -16,7 +16,8 @@
     "hecServices": "Stage, développement",
     "mwServices": "Ui design, développement",
     "h2aServices": "Développement",
-    "rhMediasTestimonial": "Quel plaisir de travailler avec Lucas ! Proactif et déterminé, il sait mener un projet à bien et trouver les solutions aux problèmes des clients. Il est à l’écoute et toujours disponible. Avec un sens aiguisé du détail, il a l’œil partout et s’implique toujours à fond. Sans jamais faire de compromis entre l’utile et l’agréable (UI/UX). Je ne peux que recommander Lucas pour son travail et son professionnalisme !"
+    "rhMediasTestimonial": "Quel plaisir de travailler avec Lucas ! Proactif et déterminé, il sait mener un projet à bien et trouver les solutions aux problèmes des clients. Il est à l’écoute et toujours disponible. Avec un sens aiguisé du détail, il a l’œil partout et s’implique toujours à fond. Sans jamais faire de compromis entre l’utile et l’agréable (UI/UX). Je ne peux que recommander Lucas pour son travail et son professionnalisme !",
+    "taverneTestimonial": "J’ai eu le plaisir de collaborer avec Lucas dans le cadre d’un projet profondément significatif : la création d’une application dédiée à la mise en lumière de mon mur de la mémoire. L’application qu’il a développée offre une expérience immersive, mais elle a aussi joué un rôle fondamental dans l’établissement de nouvelles connexions avec plusieurs acteurs culturels locaux."
   },
   "location": "Bastogne, Belgium",
   "mainSubtitle": "Passionné, curieux et prêt à relever chaque défi technique. Je construis des expériences web fluides, robustes et élégantes. Et ce n’est que le début.",
@@ -201,5 +202,6 @@
   "ProjectCard": {
     "viewDetails": "Voir détails"
   },
-  "rhMediasTestimonial": "Quel plaisir de travailler avec Lucas ! Proactif et déterminé, il sait mener un projet à bien et trouver les solutions aux problèmes des clients. Il est à l’écoute et toujours disponible. Avec un sens aiguisé du détail, il a l’œil partout et s’implique toujours à fond. Sans jamais faire de compromis entre l’utile et l’agréable (UI/UX). Je ne peux que recommander Lucas pour son travail et son professionnalisme !"
+  "rhMediasTestimonial": "Quel plaisir de travailler avec Lucas ! Proactif et déterminé, il sait mener un projet à bien et trouver les solutions aux problèmes des clients. Il est à l’écoute et toujours disponible. Avec un sens aiguisé du détail, il a l’œil partout et s’implique toujours à fond. Sans jamais faire de compromis entre l’utile et l’agréable (UI/UX). Je ne peux que recommander Lucas pour son travail et son professionnalisme !",
+  "taverneTestimonial": "J’ai eu le plaisir de collaborer avec Lucas dans le cadre d’un projet profondément significatif : la création d’une application dédiée à la mise en lumière de mon mur de la mémoire. L’application qu’il a développée offre une expérience immersive, mais elle a aussi joué un rôle fondamental dans l’établissement de nouvelles connexions avec plusieurs acteurs culturels locaux."
 }

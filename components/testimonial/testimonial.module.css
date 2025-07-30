@@ -6,6 +6,7 @@
   width: 420px;
   min-width: 420px;
   max-width: 420px;
+  height: 100%;
   padding: var(--space-3);
   background-color: var(--secondary-color-900);
 }
